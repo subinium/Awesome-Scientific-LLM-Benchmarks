@@ -1,0 +1,9 @@
+# Local Python virtualenv — scripts/generate_readme.py needs only pyyaml.
+# The list itself is just Markdown + YAML; nothing else needs ignoring.
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*

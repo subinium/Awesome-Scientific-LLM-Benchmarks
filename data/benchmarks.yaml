@@ -1,0 +1,1121 @@
+# LLM4Sci Benchmark — source of truth.
+#
+# One entry per benchmark. A benchmark appears exactly once, under its most
+# natural domain; cross-domain benchmarks (e.g. GPQA, OlympiadBench) live under
+# "General". Fields:
+#   name        short benchmark name (unique)
+#   domain      General | Math | Physics | Chemistry | Materials | Biology | Agentic
+#   subdomain   free-text tag
+#   paper_title full paper title
+#   arxiv_id    arXiv id used to crawl citations, or null
+#   paper_url   canonical paper link (arXiv / OpenReview / journal / bioRxiv)
+#   github      "owner/repo" or null
+#   org         primary releasing organization
+#   major_lab   true only for OpenAI / Google DeepMind / Anthropic / Meta /
+#               Microsoft / Apple / Nvidia / xAI / Mistral
+#   year        publication year
+#   description one sentence on what it tests
+#
+# Stars and citations are NOT stored here — they are crawled into data/stats.json
+# by scripts/update_stats.py.
+
+# ─────────────────────────────── General ────────────────────────────────────
+- name: "GPQA"
+  domain: "General"
+  subdomain: "graduate-QA"
+  paper_title: "GPQA: A Graduate-Level Google-Proof Q&A Benchmark"
+  arxiv_id: "2311.12022"
+  paper_url: "https://arxiv.org/abs/2311.12022"
+  github: "idavidrein/gpqa"
+  org: "NYU / Anthropic / Cohere"
+  major_lab: true
+  year: 2023
+  description: "448 expert-written graduate-level biology, physics, and chemistry Google-proof multiple-choice questions."
+
+- name: "Humanity's Last Exam"
+  domain: "General"
+  subdomain: "frontier"
+  paper_title: "Humanity's Last Exam"
+  arxiv_id: "2501.14249"
+  paper_url: "https://arxiv.org/abs/2501.14249"
+  github: "centerforaisafety/hle"
+  org: "CAIS / Scale AI"
+  major_lab: false
+  year: 2025
+  description: "2,500 expert questions across 100+ subjects at the frontier of human academic knowledge."
+
+- name: "ScienceQA"
+  domain: "General"
+  subdomain: "multimodal"
+  paper_title: "Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering"
+  arxiv_id: "2209.09513"
+  paper_url: "https://arxiv.org/abs/2209.09513"
+  github: "lupantech/ScienceQA"
+  org: "UCLA / Allen AI / ASU"
+  major_lab: false
+  year: 2022
+  description: "~21K multimodal multiple-choice science questions with lecture and chain-of-thought explanations."
+
+- name: "MMLU-Pro"
+  domain: "General"
+  subdomain: "knowledge"
+  paper_title: "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark"
+  arxiv_id: "2406.01574"
+  paper_url: "https://arxiv.org/abs/2406.01574"
+  github: "TIGER-AI-Lab/MMLU-Pro"
+  org: "University of Waterloo (TIGER-Lab)"
+  major_lab: false
+  year: 2024
+  description: "12K reasoning-focused ten-option questions across 14 academic and STEM domains."
+
+- name: "OlympiadBench"
+  domain: "General"
+  subdomain: "olympiad"
+  paper_title: "OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems"
+  arxiv_id: "2402.14008"
+  paper_url: "https://arxiv.org/abs/2402.14008"
+  github: "OpenBMB/OlympiadBench"
+  org: "Tsinghua University / OpenBMB"
+  major_lab: false
+  year: 2024
+  description: "8,476 olympiad-level bilingual multimodal math and physics problems with expert step annotations."
+
+- name: "SciBench"
+  domain: "General"
+  subdomain: "exam"
+  paper_title: "SciBench: Evaluating College-Level Scientific Problem-Solving Abilities of Large Language Models"
+  arxiv_id: "2307.10635"
+  paper_url: "https://arxiv.org/abs/2307.10635"
+  github: "mandyyyyii/scibench"
+  org: "UCLA"
+  major_lab: false
+  year: 2023
+  description: "789 open-ended college-level chemistry, physics, and math problems requiring multi-step reasoning."
+
+- name: "TheoremQA"
+  domain: "General"
+  subdomain: "theorem-driven"
+  paper_title: "TheoremQA: A Theorem-driven Question Answering dataset"
+  arxiv_id: "2305.12524"
+  paper_url: "https://arxiv.org/abs/2305.12524"
+  github: "TIGER-AI-Lab/TheoremQA"
+  org: "University of Waterloo (TIGER-Lab)"
+  major_lab: false
+  year: 2023
+  description: "800 questions applying 350+ theorems across math, physics, EE/CS, and finance."
+
+- name: "AGIEval"
+  domain: "General"
+  subdomain: "human-exam"
+  paper_title: "AGIEval: A Human-Centric Benchmark for Evaluating Foundation Models"
+  arxiv_id: "2304.06364"
+  paper_url: "https://arxiv.org/abs/2304.06364"
+  github: "ruixiangcui/AGIEval"
+  org: "Microsoft"
+  major_lab: true
+  year: 2023
+  description: "Human-centric benchmark from standardized exams like Gaokao, SAT, LSAT, and math competitions."
+
+- name: "SciEval"
+  domain: "General"
+  subdomain: "knowledge"
+  paper_title: "SciEval: A Multi-Level Large Language Model Evaluation Benchmark for Scientific Research"
+  arxiv_id: "2308.13149"
+  paper_url: "https://arxiv.org/abs/2308.13149"
+  github: "OpenDFM/SciEval"
+  org: "Fudan University (OpenDFM)"
+  major_lab: false
+  year: 2023
+  description: "~18K multi-level questions testing scientific knowledge across chemistry, physics, and biology."
+
+- name: "SciKnowEval"
+  domain: "General"
+  subdomain: "knowledge"
+  paper_title: "SciKnowEval: Evaluating Multi-level Scientific Knowledge of Large Language Models"
+  arxiv_id: "2406.09098"
+  paper_url: "https://arxiv.org/abs/2406.09098"
+  github: "HICAI-ZJU/SciKnowEval"
+  org: "Zhejiang University (HICAI)"
+  major_lab: false
+  year: 2024
+  description: "Tens of thousands of problems across five cognitive levels in biology, chemistry, physics, and materials."
+
+- name: "SciAssess"
+  domain: "General"
+  subdomain: "literature"
+  paper_title: "SciAssess: Benchmarking LLM Proficiency in Scientific Literature Analysis"
+  arxiv_id: "2403.01976"
+  paper_url: "https://arxiv.org/abs/2403.01976"
+  github: "deepmodeling/SciAssess"
+  org: "DP Technology (deepmodeling)"
+  major_lab: false
+  year: 2024
+  description: "Scientific literature analysis over biology, chemistry, materials, and medicine at three levels."
+
+- name: "SuperGPQA"
+  domain: "General"
+  subdomain: "graduate-QA"
+  paper_title: "SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines"
+  arxiv_id: "2502.14739"
+  paper_url: "https://arxiv.org/abs/2502.14739"
+  github: "SuperGPQA/SuperGPQA"
+  org: "ByteDance Seed / M-A-P"
+  major_lab: false
+  year: 2025
+  description: "26,529 graduate-level questions spanning 285 disciplines, including under-evaluated long-tail fields."
+
+- name: "MMMU"
+  domain: "General"
+  subdomain: "multimodal"
+  paper_title: "MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI"
+  arxiv_id: "2311.16502"
+  paper_url: "https://arxiv.org/abs/2311.16502"
+  github: "MMMU-Benchmark/MMMU"
+  org: "IN.AI / University of Waterloo / OSU"
+  major_lab: false
+  year: 2023
+  description: "11.5K college-level multimodal questions across six disciplines and 30 subjects."
+
+- name: "JEEBench"
+  domain: "General"
+  subdomain: "exam"
+  paper_title: "Have LLMs Advanced Enough? A Challenging Problem Solving Benchmark For Large Language Models"
+  arxiv_id: "2305.15074"
+  paper_url: "https://arxiv.org/abs/2305.15074"
+  github: "dair-iitd/jeebench"
+  org: "IIT Delhi"
+  major_lab: false
+  year: 2023
+  description: "515 challenging IIT-JEE Advanced physics, chemistry, and math problem-solving questions."
+
+- name: "C-Eval"
+  domain: "General"
+  subdomain: "exam"
+  paper_title: "C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models"
+  arxiv_id: "2305.08322"
+  paper_url: "https://arxiv.org/abs/2305.08322"
+  github: "hkust-nlp/ceval"
+  org: "SJTU / HKUST"
+  major_lab: false
+  year: 2023
+  description: "13,948 Chinese multiple-choice questions across 52 disciplines and four difficulty levels."
+
+- name: "OlympicArena"
+  domain: "General"
+  subdomain: "olympiad"
+  paper_title: "OlympicArena: Benchmarking Multi-discipline Cognitive Reasoning for Superintelligent AI"
+  arxiv_id: "2406.12753"
+  paper_url: "https://arxiv.org/abs/2406.12753"
+  github: "GAIR-NLP/OlympicArena"
+  org: "SJTU (GAIR)"
+  major_lab: false
+  year: 2024
+  description: "11,163 olympiad-level problems across seven disciplines for multi-discipline cognitive reasoning."
+
+- name: "GAOKAO-Bench"
+  domain: "General"
+  subdomain: "exam"
+  paper_title: "Evaluating the Performance of Large Language Models on GAOKAO Benchmark"
+  arxiv_id: "2305.12474"
+  paper_url: "https://arxiv.org/abs/2305.12474"
+  github: "OpenLMLab/GAOKAO-Bench"
+  org: "Fudan University"
+  major_lab: false
+  year: 2023
+  description: "2,811 Chinese college-entrance-exam questions across subjects for LLM evaluation."
+
+- name: "Xiezhi"
+  domain: "General"
+  subdomain: "knowledge"
+  paper_title: "Xiezhi: An Ever-Updating Benchmark for Holistic Domain Knowledge Evaluation"
+  arxiv_id: "2306.05783"
+  paper_url: "https://arxiv.org/abs/2306.05783"
+  github: "MikeGu721/XiezhiBenchmark"
+  org: "Fudan University"
+  major_lab: false
+  year: 2023
+  description: "249,587 questions spanning 516 disciplines across 13 categories, continuously updated."
+
+- name: "ARC (AI2 Reasoning Challenge)"
+  domain: "General"
+  subdomain: "science-exam-QA"
+  paper_title: "Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge"
+  arxiv_id: "1803.05457"
+  paper_url: "https://arxiv.org/abs/1803.05457"
+  github: "allenai/ARC-Solvers"
+  org: "Allen AI (AI2)"
+  major_lab: false
+  year: 2018
+  description: "7,787 grade-school science exam multiple-choice questions split into Easy and Challenge sets."
+
+- name: "OpenBookQA"
+  domain: "General"
+  subdomain: "science-exam-QA"
+  paper_title: "Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering"
+  arxiv_id: "1809.02789"
+  paper_url: "https://arxiv.org/abs/1809.02789"
+  github: "allenai/OpenBookQA"
+  org: "Allen AI (AI2)"
+  major_lab: false
+  year: 2018
+  description: "Elementary science multiple-choice questions requiring core facts plus broad common-sense knowledge."
+
+- name: "SciQ"
+  domain: "General"
+  subdomain: "science-exam-QA"
+  paper_title: "Crowdsourcing Multiple Choice Science Questions"
+  arxiv_id: "1707.06209"
+  paper_url: "https://arxiv.org/abs/1707.06209"
+  github: null
+  org: "Allen AI (AI2)"
+  major_lab: false
+  year: 2017
+  description: "13,679 crowdsourced science multiple-choice questions across physics, chemistry, and biology with evidence."
+
+- name: "SciFact"
+  domain: "General"
+  subdomain: "claim-verification"
+  paper_title: "Fact or Fiction: Verifying Scientific Claims"
+  arxiv_id: "2004.14974"
+  paper_url: "https://arxiv.org/abs/2004.14974"
+  github: "allenai/scifact"
+  org: "Allen AI (AI2)"
+  major_lab: false
+  year: 2020
+  description: "1,409 expert-written scientific claims verified against research abstracts, with rationales."
+
+- name: "QASC"
+  domain: "General"
+  subdomain: "science-QA"
+  paper_title: "QASC: A Dataset for Question Answering via Sentence Composition"
+  arxiv_id: "1910.11473"
+  paper_url: "https://arxiv.org/abs/1910.11473"
+  github: "allenai/qasc"
+  org: "Allen AI (AI2)"
+  major_lab: false
+  year: 2020
+  description: "9,980 grade-school science questions requiring retrieval and composition of two facts."
+
+# ──────────────────────────────── Math ──────────────────────────────────────
+- name: "GSM8K"
+  domain: "Math"
+  subdomain: "grade-school"
+  paper_title: "Training Verifiers to Solve Math Word Problems"
+  arxiv_id: "2110.14168"
+  paper_url: "https://arxiv.org/abs/2110.14168"
+  github: "openai/grade-school-math"
+  org: "OpenAI"
+  major_lab: true
+  year: 2021
+  description: "8.5K grade-school arithmetic word problems requiring multi-step reasoning."
+
+- name: "MATH"
+  domain: "Math"
+  subdomain: "competition"
+  paper_title: "Measuring Mathematical Problem Solving With the MATH Dataset"
+  arxiv_id: "2103.03874"
+  paper_url: "https://arxiv.org/abs/2103.03874"
+  github: "hendrycks/math"
+  org: "UC Berkeley"
+  major_lab: false
+  year: 2021
+  description: "12,500 competition mathematics problems (AMC/AIME level) with step-by-step solutions."
+
+- name: "MATH-500"
+  domain: "Math"
+  subdomain: "competition"
+  paper_title: "Let's Verify Step by Step"
+  arxiv_id: "2305.20050"
+  paper_url: "https://arxiv.org/abs/2305.20050"
+  github: "openai/prm800k"
+  org: "OpenAI"
+  major_lab: true
+  year: 2023
+  description: "500-problem held-out subset of MATH widely used for LLM evaluation."
+
+- name: "MathVista"
+  domain: "Math"
+  subdomain: "multimodal"
+  paper_title: "MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts"
+  arxiv_id: "2310.02255"
+  paper_url: "https://arxiv.org/abs/2310.02255"
+  github: "lupantech/MathVista"
+  org: "UCLA / University of Washington / Microsoft"
+  major_lab: false
+  year: 2023
+  description: "Mathematical reasoning benchmark combining visual contexts (figures, charts, diagrams) with problems."
+
+- name: "Omni-MATH"
+  domain: "Math"
+  subdomain: "olympiad"
+  paper_title: "Omni-MATH: A Universal Olympiad Level Mathematic Benchmark For Large Language Models"
+  arxiv_id: "2410.07985"
+  paper_url: "https://arxiv.org/abs/2410.07985"
+  github: "KbsdJames/Omni-MATH"
+  org: "Peking University"
+  major_lab: false
+  year: 2024
+  description: "4,428 olympiad-level competition problems across 33+ subdomains and difficulty tiers."
+
+- name: "FrontierMath"
+  domain: "Math"
+  subdomain: "frontier"
+  paper_title: "FrontierMath: A Benchmark for Evaluating Advanced Mathematical Reasoning in AI"
+  arxiv_id: "2411.04872"
+  paper_url: "https://arxiv.org/abs/2411.04872"
+  github: null
+  org: "Epoch AI"
+  major_lab: false
+  year: 2024
+  description: "Hundreds of unpublished expert-crafted research-level math problems resistant to guessing."
+
+- name: "miniF2F"
+  domain: "Math"
+  subdomain: "formal-proof"
+  paper_title: "MiniF2F: a cross-system benchmark for formal Olympiad-level mathematics"
+  arxiv_id: "2109.00110"
+  paper_url: "https://arxiv.org/abs/2109.00110"
+  github: "openai/miniF2F"
+  org: "OpenAI"
+  major_lab: true
+  year: 2021
+  description: "488 olympiad-level (AMC/AIME/IMO) problems formalized across multiple proof assistants."
+
+- name: "PutnamBench"
+  domain: "Math"
+  subdomain: "formal-proof"
+  paper_title: "PutnamBench: Evaluating Neural Theorem-Provers on the Putnam Mathematical Competition"
+  arxiv_id: "2407.11214"
+  paper_url: "https://arxiv.org/abs/2407.11214"
+  github: "trishullab/PutnamBench"
+  org: "UT Austin"
+  major_lab: false
+  year: 2024
+  description: "1,600+ Putnam competition problems formalized in Lean, Isabelle, and Coq."
+
+- name: "ProofNet"
+  domain: "Math"
+  subdomain: "formal-proof"
+  paper_title: "ProofNet: Autoformalizing and Formally Proving Undergraduate-Level Mathematics"
+  arxiv_id: "2302.12433"
+  paper_url: "https://arxiv.org/abs/2302.12433"
+  github: "zhangir-azerbayev/ProofNet"
+  org: "Yale University"
+  major_lab: false
+  year: 2023
+  description: "371 undergraduate theorems for autoformalization and formal proving in Lean."
+
+- name: "MathBench"
+  domain: "Math"
+  subdomain: "multi-level"
+  paper_title: "MathBench: Evaluating the Theory and Application Proficiency of LLMs with a Hierarchical Mathematics Benchmark"
+  arxiv_id: "2405.12209"
+  paper_url: "https://arxiv.org/abs/2405.12209"
+  github: "open-compass/MathBench"
+  org: "Shanghai AI Laboratory"
+  major_lab: false
+  year: 2024
+  description: "Hierarchical bilingual benchmark spanning arithmetic to college-level theory and application."
+
+- name: "U-MATH"
+  domain: "Math"
+  subdomain: "university"
+  paper_title: "U-MATH: A University-Level Benchmark for Evaluating Mathematical Skills in LLMs"
+  arxiv_id: "2412.03205"
+  paper_url: "https://arxiv.org/abs/2412.03205"
+  github: "Toloka/u-math"
+  org: "Toloka"
+  major_lab: false
+  year: 2024
+  description: "1,100 unpublished university-level open-ended math problems, 20% multimodal."
+
+- name: "MathOdyssey"
+  domain: "Math"
+  subdomain: "mixed-level"
+  paper_title: "MathOdyssey: Benchmarking Mathematical Problem-Solving Skills in Large Language Models Using Odyssey Math Data"
+  arxiv_id: "2406.18321"
+  paper_url: "https://arxiv.org/abs/2406.18321"
+  github: "protagolabs/odyssey-math"
+  org: "NetMind.AI"
+  major_lab: false
+  year: 2024
+  description: "387 expert-crafted high-school, university, and olympiad-level math problems."
+
+- name: "HARP"
+  domain: "Math"
+  subdomain: "competition"
+  paper_title: "HARP: A challenging human-annotated math reasoning benchmark"
+  arxiv_id: "2412.08819"
+  paper_url: "https://arxiv.org/abs/2412.08819"
+  github: "aadityasingh/HARP"
+  org: "UCL"
+  major_lab: false
+  year: 2024
+  description: "US competition math problems (AMC/AIME/USAMO) with human-written ground-truth solutions."
+
+- name: "CHAMP"
+  domain: "Math"
+  subdomain: "competition"
+  paper_title: "CHAMP: A Competition-level Dataset for Fine-Grained Analyses of LLMs' Mathematical Reasoning Capabilities"
+  arxiv_id: "2401.06961"
+  paper_url: "https://arxiv.org/abs/2401.06961"
+  github: "YilunZhou/champ-dataset"
+  org: "MIT"
+  major_lab: false
+  year: 2024
+  description: "270 high-school competition problems annotated with concepts and problem-specific hints."
+
+- name: "IMO-Bench"
+  domain: "Math"
+  subdomain: "olympiad-proof"
+  paper_title: "Towards Robust Mathematical Reasoning"
+  arxiv_id: "2511.01846"
+  paper_url: "https://arxiv.org/abs/2511.01846"
+  github: "google-deepmind/superhuman"
+  org: "Google DeepMind"
+  major_lab: true
+  year: 2025
+  description: "Olympiad-level suite testing final answers, proof-writing, grading, and Lean formal proofs, vetted by IMO medalists."
+
+# ────────────────────────────── Physics ─────────────────────────────────────
+- name: "PhysReason"
+  domain: "Physics"
+  subdomain: "reasoning"
+  paper_title: "PhysReason: A Comprehensive Benchmark towards Physics-Based Reasoning"
+  arxiv_id: "2502.12054"
+  paper_url: "https://arxiv.org/abs/2502.12054"
+  github: "dxzxy12138/PhysReason"
+  org: "Xi'an Jiaotong University"
+  major_lab: false
+  year: 2025
+  description: "1,200 physics problems with step-level automatic scoring for multi-step physics reasoning."
+
+- name: "PHYBench"
+  domain: "Physics"
+  subdomain: "olympiad"
+  paper_title: "PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models"
+  arxiv_id: "2504.16074"
+  paper_url: "https://arxiv.org/abs/2504.16074"
+  github: "phybench-official/phybench"
+  org: "Peking University"
+  major_lab: false
+  year: 2025
+  description: "500 original physics problems from high-school to olympiad level with expression-edit-distance scoring."
+
+- name: "UGPhysics"
+  domain: "Physics"
+  subdomain: "undergraduate"
+  paper_title: "UGPhysics: A Comprehensive Benchmark for Undergraduate Physics Reasoning with Large Language Models"
+  arxiv_id: "2502.00334"
+  paper_url: "https://arxiv.org/abs/2502.00334"
+  github: "YangLabHKUST/UGPhysics"
+  org: "HKUST"
+  major_lab: false
+  year: 2025
+  description: "5,520 bilingual undergraduate physics problems across 13 subjects with rule-based judging."
+
+- name: "PHYSICS"
+  domain: "Physics"
+  subdomain: "graduate"
+  paper_title: "PHYSICS: Benchmarking Foundation Models on University-Level Physics Problem Solving"
+  arxiv_id: "2503.21821"
+  paper_url: "https://arxiv.org/abs/2503.21821"
+  github: "yale-nlp/Physics"
+  org: "Yale University"
+  major_lab: false
+  year: 2025
+  description: "1,297 expert-annotated university-level physics problems across six core areas with automated evaluation."
+
+- name: "SeePhys"
+  domain: "Physics"
+  subdomain: "multimodal"
+  paper_title: "SeePhys: Does Seeing Help Thinking? -- Benchmarking Vision-Based Physics Reasoning"
+  arxiv_id: "2505.19099"
+  paper_url: "https://arxiv.org/abs/2505.19099"
+  github: "AI4Phys/SeePhys"
+  org: "AI4Phys"
+  major_lab: false
+  year: 2025
+  description: "2,000 vision-essential physics problems from middle-school to PhD level across seven domains."
+
+- name: "TPBench"
+  domain: "Physics"
+  subdomain: "theoretical"
+  paper_title: "Theoretical Physics Benchmark (TPBench): a Dataset and Study of AI Reasoning Capabilities in Theoretical Physics"
+  arxiv_id: "2502.15815"
+  paper_url: "https://arxiv.org/abs/2502.15815"
+  github: null
+  org: "University of Wisconsin-Madison"
+  major_lab: false
+  year: 2025
+  description: "57 theoretical physics problems in high-energy theory and cosmology, undergraduate to research level."
+
+- name: "ABench-Physics"
+  domain: "Physics"
+  subdomain: "graduate"
+  paper_title: "ABench-Physics: Benchmarking Physical Reasoning in LLMs via High-Difficulty and Dynamic Physics Problems"
+  arxiv_id: "2507.04766"
+  paper_url: "https://arxiv.org/abs/2507.04766"
+  github: null
+  org: "Zhejiang University / Ant Group"
+  major_lab: false
+  year: 2025
+  description: "500 hard static plus dynamic-variant physics problems testing reasoning and generalization robustness."
+
+- name: "PhysUniBench"
+  domain: "Physics"
+  subdomain: "multimodal"
+  paper_title: "PhysUniBench: An Undergraduate-Level Physics Reasoning Benchmark for Multimodal Models"
+  arxiv_id: "2506.17667"
+  paper_url: "https://arxiv.org/abs/2506.17667"
+  github: "PrismaX-Team/PhysUniBenchmark"
+  org: "PrismaX Team"
+  major_lab: false
+  year: 2025
+  description: "3,304 multimodal undergraduate physics problems, each paired with a diagram, bilingual English-Chinese."
+
+- name: "AstroMLab 1"
+  domain: "Physics"
+  subdomain: "astronomy"
+  paper_title: "AstroMLab 1: Who Wins Astronomy Jeopardy!?"
+  arxiv_id: "2407.11194"
+  paper_url: "https://arxiv.org/abs/2407.11194"
+  github: null
+  org: "AstroMLab Collaboration"
+  major_lab: false
+  year: 2024
+  description: "4,425 astronomy multiple-choice questions from Annual Reviews testing LLM astronomical knowledge."
+
+- name: "AstroVisBench"
+  domain: "Physics"
+  subdomain: "astronomy"
+  paper_title: "AstroVisBench: A Code Benchmark for Scientific Computing and Visualization in Astronomy"
+  arxiv_id: "2505.20538"
+  paper_url: "https://arxiv.org/abs/2505.20538"
+  github: "NSF-Simons-CosmicAI-Institute/AstroVisBench"
+  org: "NSF-Simons CosmicAI Institute"
+  major_lab: false
+  year: 2025
+  description: "Evaluates LLMs on end-to-end astronomy computing workflows and scientific result visualization."
+
+# ───────────────────────────── Chemistry ────────────────────────────────────
+- name: "ChemLLMBench"
+  domain: "Chemistry"
+  subdomain: "molecular"
+  paper_title: "What can Large Language Models do in chemistry? A comprehensive benchmark on eight tasks"
+  arxiv_id: "2305.18365"
+  paper_url: "https://arxiv.org/abs/2305.18365"
+  github: "ChemFoundationModels/ChemLLMBench"
+  org: "University of Notre Dame et al."
+  major_lab: false
+  year: 2023
+  description: "Eight chemistry tasks including reaction prediction, retrosynthesis, and molecule captioning for LLMs."
+
+- name: "SMolInstruct / LlaSMol"
+  domain: "Chemistry"
+  subdomain: "molecular"
+  paper_title: "LlaSMol: Advancing Large Language Models for Chemistry with a Large-Scale, Comprehensive, High-Quality Instruction Tuning Dataset"
+  arxiv_id: "2402.09391"
+  paper_url: "https://arxiv.org/abs/2402.09391"
+  github: "OSU-NLP-Group/LLM4Chem"
+  org: "OSU NLP Group"
+  major_lab: false
+  year: 2024
+  description: "Large-scale instruction dataset of 14 small-molecule chemistry tasks used to train and evaluate LlaSMol."
+
+- name: "ChemBench"
+  domain: "Chemistry"
+  subdomain: "knowledge"
+  paper_title: "A framework for evaluating the chemical knowledge and reasoning abilities of LLMs against the expertise of chemists"
+  arxiv_id: "2404.01475"
+  paper_url: "https://doi.org/10.1038/s41557-025-01815-x"
+  github: "lamalab-org/chembench"
+  org: "LAMALab, University of Jena (Jablonka group)"
+  major_lab: false
+  year: 2024
+  description: "2,700+ curated questions probing LLM chemical knowledge and reasoning against expert chemists."
+
+- name: "MaCBench"
+  domain: "Chemistry"
+  subdomain: "multimodal"
+  paper_title: "Probing the limitations of multimodal language models for chemistry and materials research"
+  arxiv_id: "2411.16955"
+  paper_url: "https://arxiv.org/abs/2411.16955"
+  github: "lamalab-org/macbench"
+  org: "LAMALab (Jena) / IIT Delhi"
+  major_lab: false
+  year: 2024
+  description: "1,100+ image-question pairs probing multimodal LLM limitations across chemistry and materials workflows."
+
+- name: "MoleculeQA"
+  domain: "Chemistry"
+  subdomain: "molecular"
+  paper_title: "MoleculeQA: A Dataset to Evaluate Factual Accuracy in Molecular Comprehension"
+  arxiv_id: "2403.08192"
+  paper_url: "https://arxiv.org/abs/2403.08192"
+  github: "IDEA-XL/MoleculeQA"
+  org: "IDEA Research"
+  major_lab: false
+  year: 2024
+  description: "62K QA pairs over 23K molecules evaluating factual accuracy of LLM molecular comprehension."
+
+- name: "ChemEval"
+  domain: "Chemistry"
+  subdomain: "knowledge"
+  paper_title: "ChemEval: A Comprehensive Multi-Level Chemical Evaluation for Large Language Models"
+  arxiv_id: "2409.13989"
+  paper_url: "https://arxiv.org/abs/2409.13989"
+  github: "USTC-StarTeam/ChemEval"
+  org: "USTC"
+  major_lab: false
+  year: 2024
+  description: "Multi-level chemistry benchmark spanning 42 tasks across four progressive difficulty levels for LLMs."
+
+- name: "ChemSafetyBench"
+  domain: "Chemistry"
+  subdomain: "safety"
+  paper_title: "ChemSafetyBench: Benchmarking LLM Safety on Chemistry Domain"
+  arxiv_id: "2411.16736"
+  paper_url: "https://arxiv.org/abs/2411.16736"
+  github: null
+  org: "Peking University"
+  major_lab: false
+  year: 2024
+  description: "Safety benchmark testing LLM handling of hazardous-chemical property, legality, and synthesis queries."
+
+# ───────────────────────────── Materials ────────────────────────────────────
+- name: "MatSci-NLP"
+  domain: "Materials"
+  subdomain: "knowledge"
+  paper_title: "MatSci-NLP: Evaluating Scientific Language Models on Materials Science Language Tasks Using Text-to-Schema Modeling"
+  arxiv_id: "2305.08264"
+  paper_url: "https://arxiv.org/abs/2305.08264"
+  github: "BangLab-UdeM-Mila/NLP4MatSci-ACL23"
+  org: "Mila / Universite de Montreal"
+  major_lab: false
+  year: 2023
+  description: "Seven materials-science NLP tasks evaluating language models via a unified text-to-schema approach."
+
+- name: "MaScQA"
+  domain: "Materials"
+  subdomain: "knowledge"
+  paper_title: "MaScQA: Investigating Materials Science Knowledge of Large Language Models"
+  arxiv_id: "2308.09115"
+  paper_url: "https://doi.org/10.1039/D3DD00188A"
+  github: "M3RG-IITD/MaScQA"
+  org: "IIT Delhi (M3RG)"
+  major_lab: false
+  year: 2024
+  description: "650 undergraduate-level materials science questions across 14 categories for evaluating LLM knowledge."
+
+- name: "LLM4Mat-Bench"
+  domain: "Materials"
+  subdomain: "property-prediction"
+  paper_title: "LLM4Mat-Bench: Benchmarking Large Language Models for Materials Property Prediction"
+  arxiv_id: "2411.00177"
+  paper_url: "https://arxiv.org/abs/2411.00177"
+  github: "vertaix/LLM4Mat-Bench"
+  org: "Princeton (Vertaix)"
+  major_lab: false
+  year: 2024
+  description: "Largest benchmark for LLM materials property prediction over 1.9M crystals and 45 properties."
+
+- name: "MSQA"
+  domain: "Materials"
+  subdomain: "reasoning"
+  paper_title: "MSQA: Benchmarking LLMs on Graduate-Level Materials Science Reasoning and Knowledge"
+  arxiv_id: "2505.23982"
+  paper_url: "https://arxiv.org/abs/2505.23982"
+  github: null
+  org: "academic (multi-institution)"
+  major_lab: false
+  year: 2025
+  description: "1,757 graduate-level materials science questions requiring factual knowledge and multi-step reasoning."
+
+# ────────────────────────────── Biology ─────────────────────────────────────
+- name: "GeneGPT"
+  domain: "Biology"
+  subdomain: "genomics"
+  paper_title: "GeneGPT: Augmenting Large Language Models with Domain Tools for Improved Access to Biomedical Information"
+  arxiv_id: "2304.09667"
+  paper_url: "https://arxiv.org/abs/2304.09667"
+  github: "ncbi/GeneGPT"
+  org: "NCBI"
+  major_lab: false
+  year: 2023
+  description: "Teaches LLMs to call NCBI Web APIs; adds GeneHop, evaluated on GeneTuring."
+
+- name: "LAB-Bench"
+  domain: "Biology"
+  subdomain: "biology-research"
+  paper_title: "LAB-Bench: Measuring Capabilities of Language Models for Biology Research"
+  arxiv_id: "2407.10362"
+  paper_url: "https://arxiv.org/abs/2407.10362"
+  github: "Future-House/LAB-Bench"
+  org: "FutureHouse"
+  major_lab: false
+  year: 2024
+  description: "2,400+ MCQs across literature, figures, databases, protocols, and DNA/protein sequence tasks."
+
+- name: "Biomni"
+  domain: "Biology"
+  subdomain: "bioinformatics-agent"
+  paper_title: "Biomni: A General-Purpose Biomedical AI Agent"
+  arxiv_id: null
+  paper_url: "https://www.biorxiv.org/content/10.1101/2025.05.30.656746"
+  github: "snap-stanford/Biomni"
+  org: "Stanford"
+  major_lab: false
+  year: 2025
+  description: "General biomedical agent with Biomni-Eval: 433 instances across 10 reasoning tasks."
+
+- name: "BixBench"
+  domain: "Biology"
+  subdomain: "bioinformatics-agent"
+  paper_title: "BixBench: a Comprehensive Benchmark for LLM-based Agents in Computational Biology"
+  arxiv_id: "2503.00096"
+  paper_url: "https://arxiv.org/abs/2503.00096"
+  github: "Future-House/BixBench"
+  org: "FutureHouse"
+  major_lab: false
+  year: 2025
+  description: "Bioinformatics agents tackle 53 real analysis scenarios with ~300 open-answer research questions."
+
+- name: "GeneTuring"
+  domain: "Biology"
+  subdomain: "genomics"
+  paper_title: "Benchmarking large language models for genomic knowledge with GeneTuring"
+  arxiv_id: null
+  paper_url: "https://www.biorxiv.org/content/10.1101/2023.03.11.532238"
+  github: "Winnie09/GeneTuring"
+  org: "Columbia University"
+  major_lab: false
+  year: 2023
+  description: "16 genomics tasks, 1,600 questions probing LLM genomic knowledge and reasoning."
+
+- name: "ProteinLMBench"
+  domain: "Biology"
+  subdomain: "proteins"
+  paper_title: "A Fine-tuning Dataset and Benchmark for Large Language Models for Protein Understanding"
+  arxiv_id: "2406.05540"
+  paper_url: "https://arxiv.org/abs/2406.05540"
+  github: "tsynbio/ProteinLMDataset"
+  org: "Shanghai Jiao Tong University"
+  major_lab: false
+  year: 2024
+  description: "944 verified MCQs assessing LLM comprehension of protein sequences and descriptions."
+
+- name: "BioMaze"
+  domain: "Biology"
+  subdomain: "pathway-reasoning"
+  paper_title: "BioMaze: Benchmarking and Enhancing Large Language Models for Biological Pathway Reasoning"
+  arxiv_id: "2502.16660"
+  paper_url: "https://arxiv.org/abs/2502.16660"
+  github: "zhao-ht/BioMaze"
+  org: "Peking University"
+  major_lab: false
+  year: 2025
+  description: "5.1K real-research pathway problems testing LLM reasoning over biological pathways and perturbations."
+
+- name: "CellVoyager"
+  domain: "Biology"
+  subdomain: "bioinformatics-agent"
+  paper_title: "CellVoyager: AI CompBio Agent Generates New Insights by Autonomously Analyzing Biological Data"
+  arxiv_id: null
+  paper_url: "https://www.biorxiv.org/content/10.1101/2025.06.03.657517"
+  github: "zou-group/CellVoyager"
+  org: "Stanford"
+  major_lab: false
+  year: 2025
+  description: "CellBench: 76 scRNA-seq studies test agents predicting which analyses the authors performed."
+
+- name: "BioML-bench"
+  domain: "Biology"
+  subdomain: "bioinformatics-agent"
+  paper_title: "BioML-bench: Evaluation of AI Agents for End-to-End Biomedical ML"
+  arxiv_id: null
+  paper_url: "https://www.biorxiv.org/content/10.1101/2025.09.01.673319"
+  github: "science-machine/biomlbench"
+  org: "ScienceMachine"
+  major_lab: false
+  year: 2025
+  description: "AI agents build end-to-end biomedical ML pipelines across protein, omics, imaging, and drug tasks."
+
+- name: "GenoTEX"
+  domain: "Biology"
+  subdomain: "genomics"
+  paper_title: "GenoTEX: An LLM Agent Benchmark for Automated Gene Expression Data Analysis"
+  arxiv_id: "2406.15341"
+  paper_url: "https://arxiv.org/abs/2406.15341"
+  github: "Liu-Hy/GenoTEX"
+  org: "UIUC"
+  major_lab: false
+  year: 2024
+  description: "Expert-curated gene-expression tasks: dataset selection, preprocessing, and gene-trait statistical analysis."
+
+- name: "BioLLMBench"
+  domain: "Biology"
+  subdomain: "bioinformatics"
+  paper_title: "BioLLMBench: A Comprehensive Benchmarking of Large Language Models in Bioinformatics"
+  arxiv_id: null
+  paper_url: "https://www.biorxiv.org/content/10.1101/2023.12.19.572483"
+  github: null
+  org: "UCLA"
+  major_lab: false
+  year: 2023
+  description: "2,160 runs evaluating GPT-4, Bard, and LLaMA across 24 bioinformatics tasks and metrics."
+
+- name: "LifeSciBench"
+  domain: "Biology"
+  subdomain: "life-science-research"
+  paper_title: "Introducing LifeSciBench"
+  arxiv_id: null
+  paper_url: "https://openai.com/index/introducing-life-sci-bench/"
+  github: null
+  org: "OpenAI"
+  major_lab: true
+  year: 2026
+  description: "750 expert-authored free-response life-science research tasks across seven biological domains, rubric-graded."
+
+- name: "GeneBench-Pro"
+  domain: "Biology"
+  subdomain: "computational-biology"
+  paper_title: "Introducing GeneBench-Pro"
+  arxiv_id: null
+  paper_url: "https://openai.com/index/introducing-genebench-pro/"
+  github: null
+  org: "OpenAI"
+  major_lab: true
+  year: 2026
+  description: "129 messy, judgment-intensive computational-biology problems across ten genomics domains on realistic datasets."
+
+- name: "BioMysteryBench"
+  domain: "Biology"
+  subdomain: "bioinformatics-agent"
+  paper_title: "Evaluating Claude's bioinformatics research capabilities with BioMysteryBench"
+  arxiv_id: null
+  paper_url: "https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench"
+  github: null
+  org: "Anthropic"
+  major_lab: true
+  year: 2026
+  description: "99 expert-written bioinformatics tasks over raw datasets, judged on the final biological conclusion, not the path."
+
+- name: "HealthBench"
+  domain: "Biology"
+  subdomain: "clinical-medical"
+  paper_title: "HealthBench: Evaluating Large Language Models Towards Improved Human Health"
+  arxiv_id: "2505.08775"
+  paper_url: "https://arxiv.org/abs/2505.08775"
+  # openai/simple-evals is a shared multi-eval monorepo, not a HealthBench repo — omit to avoid a misleading star count.
+  github: null
+  org: "OpenAI"
+  major_lab: true
+  year: 2025
+  description: "5,000 multi-turn physician-crafted health conversations scored by rubric criteria for LLM performance and safety."
+
+# ────────────────────────────── Agentic ─────────────────────────────────────
+- name: "MLE-bench"
+  domain: "Agentic"
+  subdomain: "ml-research"
+  paper_title: "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering"
+  arxiv_id: "2410.07095"
+  paper_url: "https://arxiv.org/abs/2410.07095"
+  github: "openai/mle-bench"
+  org: "OpenAI"
+  major_lab: true
+  year: 2024
+  description: "75 Kaggle ML-engineering competitions testing agents against human leaderboards."
+
+- name: "MLAgentBench"
+  domain: "Agentic"
+  subdomain: "ml-research"
+  paper_title: "MLAgentBench: Evaluating Language Agents on Machine Learning Experimentation"
+  arxiv_id: "2310.03302"
+  paper_url: "https://arxiv.org/abs/2310.03302"
+  github: "snap-stanford/MLAgentBench"
+  org: "Stanford"
+  major_lab: false
+  year: 2023
+  description: "13 ML experimentation tasks where agents read, write, and execute code to improve performance."
+
+- name: "PaperBench"
+  domain: "Agentic"
+  subdomain: "paper-reproduction"
+  paper_title: "PaperBench: Evaluating AI's Ability to Replicate AI Research"
+  arxiv_id: "2504.01848"
+  paper_url: "https://arxiv.org/abs/2504.01848"
+  # openai/frontier-evals (formerly preparedness) is a shared multi-eval monorepo — omit to avoid a misleading star count.
+  github: null
+  org: "OpenAI"
+  major_lab: true
+  year: 2025
+  description: "Agents replicate 20 ICML 2024 papers from scratch, graded on 8,316 rubric criteria."
+
+- name: "SciCode"
+  domain: "Agentic"
+  subdomain: "scientific-coding"
+  paper_title: "SciCode: A Research Coding Benchmark Curated by Scientists"
+  arxiv_id: "2407.13168"
+  paper_url: "https://arxiv.org/abs/2407.13168"
+  github: "scicode-bench/SciCode"
+  org: "UIUC / Princeton / Argonne National Lab"
+  major_lab: false
+  year: 2024
+  description: "80 real research coding problems across 16 natural-science subfields, split into 338 subproblems."
+
+- name: "ScienceAgentBench"
+  domain: "Agentic"
+  subdomain: "data-analysis"
+  paper_title: "ScienceAgentBench: Toward Rigorous Assessment of Language Agents for Data-Driven Scientific Discovery"
+  arxiv_id: "2410.05080"
+  paper_url: "https://arxiv.org/abs/2410.05080"
+  github: "OSU-NLP-Group/ScienceAgentBench"
+  org: "Ohio State (OSU-NLP)"
+  major_lab: false
+  year: 2024
+  description: "102 data-driven discovery tasks from 44 peer-reviewed papers, evaluating agents that write Python programs."
+
+- name: "MLGym"
+  domain: "Agentic"
+  subdomain: "ml-research"
+  paper_title: "MLGym: A New Framework and Benchmark for Advancing AI Research Agents"
+  arxiv_id: "2502.14499"
+  paper_url: "https://arxiv.org/abs/2502.14499"
+  github: "facebookresearch/MLGym"
+  org: "Meta"
+  major_lab: true
+  year: 2025
+  description: "Gym framework with 13 open-ended AI research tasks spanning vision, NLP, RL, and game theory."
+
+- name: "RE-Bench"
+  domain: "Agentic"
+  subdomain: "ml-research"
+  paper_title: "RE-Bench: Evaluating frontier AI R&D capabilities of language model agents against human experts"
+  arxiv_id: "2411.15114"
+  paper_url: "https://arxiv.org/abs/2411.15114"
+  github: "METR/RE-Bench"
+  org: "METR"
+  major_lab: false
+  year: 2024
+  description: "Seven open-ended ML research-engineering environments comparing agents against 61 human experts."
+
+- name: "DiscoveryWorld"
+  domain: "Agentic"
+  subdomain: "autonomous-discovery"
+  paper_title: "DiscoveryWorld: A Virtual Environment for Developing and Evaluating Automated Scientific Discovery Agents"
+  arxiv_id: "2406.06769"
+  paper_url: "https://arxiv.org/abs/2406.06769"
+  github: "allenai/discoveryworld"
+  org: "Allen AI (AI2)"
+  major_lab: false
+  year: 2024
+  description: "Simulated environment with 120 tasks requiring full cycles of hypothesis, experiment, and analysis."
+
+- name: "CORE-Bench"
+  domain: "Agentic"
+  subdomain: "paper-reproduction"
+  paper_title: "CORE-Bench: Fostering the Credibility of Published Research Through a Computational Reproducibility Agent Benchmark"
+  arxiv_id: "2409.11363"
+  paper_url: "https://arxiv.org/abs/2409.11363"
+  github: "siegelz/core-bench"
+  org: "Princeton"
+  major_lab: false
+  year: 2024
+  description: "270 tasks from 90 papers testing agents on computationally reproducing published scientific results."
+
+- name: "DSBench"
+  domain: "Agentic"
+  subdomain: "data-analysis"
+  paper_title: "DSBench: How Far Are Data Science Agents from Becoming Data Science Experts?"
+  arxiv_id: "2409.07703"
+  paper_url: "https://arxiv.org/abs/2409.07703"
+  github: "LiqiangJing/DSBench"
+  org: "UT Dallas / Tencent AI Lab"
+  major_lab: false
+  year: 2024
+  description: "540 realistic data-analysis and data-modeling tasks sourced from ModelOff and Kaggle competitions."
+
+- name: "DiscoveryBench"
+  domain: "Agentic"
+  subdomain: "autonomous-discovery"
+  paper_title: "DiscoveryBench: Towards Data-Driven Discovery with Large Language Models"
+  arxiv_id: "2407.01725"
+  paper_url: "https://arxiv.org/abs/2407.01725"
+  github: "allenai/discoverybench"
+  org: "Allen AI (AI2)"
+  major_lab: false
+  year: 2024
+  description: "264 real plus 903 synthetic tasks for data-driven hypothesis discovery across six domains."
+
+- name: "BLADE"
+  domain: "Agentic"
+  subdomain: "data-analysis"
+  paper_title: "BLADE: Benchmarking Language Model Agents for Data-Driven Science"
+  arxiv_id: "2408.09667"
+  paper_url: "https://arxiv.org/abs/2408.09667"
+  github: "behavioral-data/BLADE"
+  org: "University of Washington"
+  major_lab: false
+  year: 2024
+  description: "Twelve datasets and research questions evaluating agents' analytical decisions against expert ground truth."
+
+- name: "SUPER"
+  domain: "Agentic"
+  subdomain: "paper-reproduction"
+  paper_title: "SUPER: Evaluating Agents on Setting Up and Executing Tasks from Research Repositories"
+  arxiv_id: "2409.07440"
+  paper_url: "https://arxiv.org/abs/2409.07440"
+  github: "allenai/super-benchmark"
+  org: "Allen AI (AI2)"
+  major_lab: false
+  year: 2024
+  description: "Evaluates agents on setting up and executing tasks from research code repositories."
+
+- name: "ResearchBench"
+  domain: "Agentic"
+  subdomain: "autonomous-discovery"
+  paper_title: "ResearchBench: Benchmarking LLMs in Scientific Discovery via Inspiration-Based Task Decomposition"
+  arxiv_id: "2503.21248"
+  paper_url: "https://arxiv.org/abs/2503.21248"
+  github: null
+  org: "Shanghai AI Lab / NTU"
+  major_lab: false
+  year: 2025
+  description: "Benchmarks scientific discovery via inspiration retrieval, hypothesis composition, and ranking across twelve disciplines."
+
+- name: "MLR-Bench"
+  domain: "Agentic"
+  subdomain: "ml-research"
+  paper_title: "MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research"
+  arxiv_id: "2505.19955"
+  paper_url: "https://arxiv.org/abs/2505.19955"
+  github: "chchenhui/mlrbench"
+  org: "National University of Singapore"
+  major_lab: false
+  year: 2025
+  description: "201 workshop-derived tasks evaluating agents across idea generation, experimentation, and paper writing."
+
+- name: "Curie"
+  domain: "Agentic"
+  subdomain: "autonomous-discovery"
+  paper_title: "Curie: Toward Rigorous and Automated Scientific Experimentation with AI Agents"
+  arxiv_id: "2502.16069"
+  paper_url: "https://arxiv.org/abs/2502.16069"
+  github: "Just-Curieous/Curie"
+  org: "University of Michigan"
+  major_lab: false
+  year: 2025
+  description: "Framework and 46-question benchmark for rigorous, automated scientific experimentation across four CS domains."
+
+- name: "AAAR-1.0"
+  domain: "Agentic"
+  subdomain: "research-assistance"
+  paper_title: "AAAR-1.0: Assessing AI's Potential to Assist Research"
+  arxiv_id: "2410.22394"
+  paper_url: "https://arxiv.org/abs/2410.22394"
+  github: "RenzeLou/AAAR-1.0"
+  org: "Penn State et al."
+  major_lab: false
+  year: 2024
+  description: "Expert-annotated tasks assessing LLMs on equation inference, experiment design, and paper-weakness identification."
