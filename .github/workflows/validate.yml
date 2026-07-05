@@ -8,6 +8,11 @@ on:
       - "data/benchmarks.yaml"
       - "scripts/**"
 
+# Read-only: this job never writes to the repo. Least privilege matters most on
+# pull_request runs from forks, where a broad default token is a real risk.
+permissions:
+  contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
