@@ -5,3 +5,7 @@ next-env.d.ts
 *.tsbuildinfo
 .vercel
 .DS_Store
+
+# Generated from data/benchmarks.yaml by scripts/gen-data.mjs (predev/prebuild).
+# Never commit — the YAML is the single source of truth.
+/data/benchmarks.json

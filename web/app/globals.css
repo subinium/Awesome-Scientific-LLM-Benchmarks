@@ -1,32 +1,66 @@
 @import "tailwindcss";
 
+/* ── Light (warm paper) ── */
 :root {
-  --bg: #0a0a0b;
-  --panel: #111114;
-  --border: #26262b;
-  --text: #e7e7ea;
-  --muted: #8a8a93;
-  --accent: #7c9cff;
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --surface-2: #f3f1ea;
+  --text: #1b1a16;
+  --muted: #5c584f;
+  --faint: #928d81;
+  --border: #e6e2d8;
+  --border-strong: #d5d0c2;
+  --accent: #2a4bc4;
+  --accent-soft: #eaeefb;
+}
+
+/* ── Dark (ink) ── */
+:root[data-theme="dark"] {
+  --bg: #0d0d0c;
+  --surface: #141416;
+  --surface-2: #1c1c1f;
+  --text: #eae7df;
+  --muted: #a29e93;
+  --faint: #6f6b61;
+  --border: #282824;
+  --border-strong: #37352f;
+  --accent: #94a6ff;
+  --accent-soft: #191d2c;
 }
 
 @theme inline {
   --color-bg: var(--bg);
-  --color-panel: var(--panel);
-  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
   --color-text: var(--text);
   --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
   --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+
+  --font-serif: var(--font-instrument), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SF Mono", monospace;
 }
 
 html {
+  color-scheme: light dark;
+}
+:root[data-theme="dark"] {
   color-scheme: dark;
 }
 
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: var(--font-sans);
+  font-size: 15.5px;
+  line-height: 1.62;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv05", "ss01";
 }
 
 a {
@@ -34,5 +68,10 @@ a {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--accent) 35%, transparent);
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+/* Numeric/tabular data reads better with mono + tabular figures. */
+.tnum {
+  font-variant-numeric: tabular-nums;
 }

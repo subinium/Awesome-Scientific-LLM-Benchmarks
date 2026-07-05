@@ -1,0 +1,21 @@
+name: Validate
+
+# Fast, dependency-light integrity check for pull requests that touch the data.
+# A contributor only edits data/benchmarks.yaml — this makes sure it stays valid.
+on:
+  pull_request:
+    paths:
+      - "data/benchmarks.yaml"
+      - "scripts/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Validate benchmarks.yaml (required fields, domains, no dup names)
+        run: python scripts/generate_readme.py --check

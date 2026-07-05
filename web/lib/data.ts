@@ -14,6 +14,7 @@ export interface Benchmark {
   paper_url: string | null;
   arxiv_id: string | null;
   github: string | null;
+  topics: string[];
   hf_dataset: string | null;
   license: string | null;
   size: number | null;
@@ -42,4 +43,25 @@ export const DOMAIN_LABEL: Record<string, string> = {
   Materials: "Materials",
   Biology: "Biology",
   Agentic: "Agentic",
+};
+
+export const DOMAIN_ORDER = [
+  "General",
+  "Math",
+  "Physics",
+  "Chemistry",
+  "Materials",
+  "Biology",
+  "Agentic",
+];
+
+// Muted, low-saturation dot per domain — aids scanning without being loud.
+export const DOMAIN_DOT: Record<string, string> = {
+  General: "#64748b",
+  Math: "#6366f1",
+  Physics: "#8b5cf6",
+  Chemistry: "#0d9488",
+  Materials: "#d97706",
+  Biology: "#059669",
+  Agentic: "#e05d44",
 };
