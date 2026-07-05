@@ -1,5 +1,9 @@
 # Local Python virtualenv — scripts/generate_readme.py needs only pyyaml.
 # The list itself is just Markdown + YAML; nothing else needs ignoring.
+
+# Project-local agent instructions — kept out of the public repo.
+CLAUDE.md
+
 .venv/
 venv/
 __pycache__/
