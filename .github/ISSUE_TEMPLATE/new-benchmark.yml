@@ -1,0 +1,77 @@
+name: 📊 Propose a benchmark
+description: Suggest a new LLM-for-science benchmark to add to the index.
+title: "[Benchmark] <name>"
+labels: ["new-benchmark"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for a suggestion! Prefer opening a PR that edits
+        `data/benchmarks.yaml` directly — but an issue works too. See the
+        [inclusion bar](../blob/main/CONTRIBUTING.md#what-we-include-inclusion-bar).
+  - type: input
+    id: name
+    attributes:
+      label: Benchmark name
+      placeholder: e.g. GPQA
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      options:
+        - General
+        - Math
+        - Physics
+        - Chemistry
+        - Materials
+        - Biology
+        - Agentic
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Paper URL
+      placeholder: https://arxiv.org/abs/...
+    validations:
+      required: true
+  - type: input
+    id: github
+    attributes:
+      label: Code repo (owner/repo)
+      placeholder: idavidrein/gpqa  (leave blank if none)
+  - type: input
+    id: org
+    attributes:
+      label: Organization
+      placeholder: e.g. NYU / Anthropic
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: One-sentence description
+      placeholder: What does it test, and how big is it?
+    validations:
+      required: true
+  - type: textarea
+    id: legitimacy
+    attributes:
+      label: Why it qualifies (legitimacy)
+      description: Venue accepted at, citation count, or the releasing institution.
+      placeholder: e.g. ICLR 2025 · ~120 citations · Stanford
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: It is a benchmark/eval (not a model or training dataset)
+          required: true
+        - label: Its primary purpose is evaluating LLMs on science / scientific research
+          required: true
+        - label: The paper resolves and the repo (if any) exists
+          required: true
