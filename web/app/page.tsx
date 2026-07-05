@@ -24,10 +24,9 @@ export default function Home() {
           Benchmarks for evaluating LLMs on scientific reasoning &amp; discovery
         </h1>
         <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted">
-          A searchable database spanning mathematics, physics &amp; astronomy,
-          chemistry, materials science, biology, and agentic science. Each entry
-          links its paper, code, dataset, and real example items — nothing
-          hand-entered, every source verified.
+          A curated, searchable collection of benchmarks across the natural
+          sciences and agentic research. Each entry includes its paper, code,
+          dataset, and sample items, checked against the original source.
         </p>
 
         {/* Signature overview: the whole collection at a glance */}
