@@ -1,4 +1,4 @@
-# Awesome Scientific LLM Benchmarks [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Scientific LLM Benchmarks [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > Benchmarks for evaluating large language models on **scientific reasoning and discovery** — across mathematics, physics & astronomy, chemistry, materials science, biology, and agentic science.
 
@@ -216,3 +216,11 @@ _Listed alphabetically within each domain._
 [Back to top](#contents)
 
 <!-- BENCHMARKS:END -->
+
+## Contributing
+
+Found a missing benchmark or an error? Edit **only** [`data/benchmarks.yaml`](data/benchmarks.yaml) and open a PR — the README, website, and examples regenerate automatically. See [CONTRIBUTING.md](CONTRIBUTING.md) for the schema and inclusion bar.
+
+## License
+
+Released under the [MIT License](LICENSE). Each entry links to its original paper and code; benchmark metadata is drawn from public sources.

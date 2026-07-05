@@ -83,3 +83,8 @@ otherwise misrepresent the single benchmark).
 Rows are listed **alphabetically** within each domain and there is no ranking —
 so nothing to argue about. The README is regenerated automatically; don't touch
 its formatting.
+
+## License
+
+By contributing, you agree that your contributions are licensed under the
+project's [MIT License](LICENSE).
