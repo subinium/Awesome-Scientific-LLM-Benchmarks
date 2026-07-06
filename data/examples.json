@@ -2211,5 +2211,51 @@
    "paper_cleaned_json": "{\"abstract\":\"In practice, preference learning from human feedback depends on incomplete data with hi",
    "conference": "iclr2024"
   }
+ ],
+ "ProofNet": [
+  {
+   "id": "Rudin|exercise_1_1b",
+   "nl_statement": "If $r$ is rational $(r \\neq 0)$ and $x$ is irrational, prove that $rx$ is irrational.",
+   "nl_proof": "\\begin{proof}\n\n    If $r x$ were rational, then $x=\\frac{r x}{r}$ would also be rational.\n\n\\end{proof}",
+   "formal_statement": "theorem exercise_1_1b\n(x : ℝ)\n(y : ℚ)\n(h : y ≠ 0)\n: ( irrational x ) -> irrational ( x * y ) :=",
+   "src_header": "import .common\n\nopen real complex\nopen topological_space\nopen filter\nopen_locale real \nopen_locale topology\nopen_locale big_operators\nopen_locale complex_conjugate\nopen_locale filter\n\n\nnoncomputable theory\n\n"
+  },
+  {
+   "id": "Rudin|exercise_1_4",
+   "nl_statement": "Let $E$ be a nonempty subset of an ordered set; suppose $\\alpha$ is a lower bound of $E$ and $\\beta$ is an upper bound of $E$. Prove that $\\alpha \\leq \\beta$.",
+   "nl_proof": "\\begin{proof}\n\nSince $E$ is nonempty, there exists $x \\in E$. Then by definition of lower and upper bounds we have $\\alpha \\leq x \\leq \\beta$, and hence by property $i i$ in the definition of an ordering, we have $\\alpha<\\beta$ unless $\\alpha=x=\\beta$.\n\n\\end{proof}",
+   "formal_statement": "theorem exercise_1_4\n(α : Type*) [partial_order α]\n(s : set α)\n(x y : α)\n(h₀ : set.nonempty s)\n(h₁ : x ∈ lower_bounds s)\n(h₂ : y ∈ upper_bounds s)\n: x ≤ y :=",
+   "src_header": "import .common\n\nopen real complex\nopen topological_space\nopen filter\nopen_locale real \nopen_locale topology\nopen_locale big_operators\nopen_locale complex_conjugate\nopen_locale filter\n\n\nnoncomputable theory\n\n"
+  }
+ ],
+ "MatText": [
+  {
+   "local_env": "P1\nTc (1a) Cl[Tc]12(Cl)[Mo][Tc]2[Mo]1\nMo (1a) Cl[Tc]1[Tc][Mo]21[Tc][Tc]2\nCl (1a) Cl[Tc][Mo][Tc]\nTc (1a) [Mo]1[Tc]2[Tc]1[Mo]2",
+   "composition": "ClMoTc2",
+   "cif_p1": "data_Tc2MoCl\n_symmetry_space_group_name_H-M   'P 1'\n_cell_length_a   2.93\n_cell_length_b   4.08\n_cell_length_c   5.2\n_cell_angle_alpha   90.0\n_cell_angle_beta   90.0\n_cell_angle_gamma   90.0\n_symmetry_Int_Tables_number   1\n_chemical_formula_structural   Tc2MoCl\n_chemical_formula_sum   'Tc2 Mo1 Cl1'\n_cell_volume   62.07\n_cell_formula_units_Z   1\nloop_\n _symmetry_equiv_pos_site_id\n _symmetry_equiv_pos_as_xyz\n  1  'x, y, z'\nloop_\n _atom_site_type_symbol\n _atom_site_label\n _atom_site_symmetry_multiplicity\n _atom_site_fract_x\n _atom_site_fract_y\n _atom_site_fract_z\n _atom_site_occupancy\n  Tc  Tc2  1  0.46  0.04  0.8  1.0\n  Tc  Tc3  1  0.46  0.04  0.39  1.0\n  Mo  Mo1  1  0.0  0.0  0.6  1.0\n  Cl  C …",
+   "cif_symmetrized": "data_Tc2MoCl\n_symmetry_space_group_name_H-M   P1\n_cell_length_a   2.93\n_cell_length_b   4.08\n_cell_length_c   5.2\n_cell_angle_alpha   90.0\n_cell_angle_beta   90.0\n_cell_angle_gamma   90.0\n_symmetry_Int_Tables_number   1\n_chemical_formula_structural   Tc2MoCl\n_chemical_formula_sum   'Tc2 Mo1 Cl1'\n_cell_volume   62.07\n_cell_formula_units_Z   1\nloop_\n _symmetry_equiv_pos_site_id\n _symmetry_equiv_pos_as_xyz\n  1  'x, y, z'\nloop_\n _atom_site_type_symbol\n _atom_site_label\n _atom_site_symmetry_multiplicity\n _atom_site_fract_x\n _atom_site_fract_y\n _atom_site_fract_z\n _atom_site_occupancy\n  Tc  Tc0  1  0.46  0.04  0.39  1.0\n  Tc  Tc1  1  0.46  0.04  0.8  1.0\n  Mo  Mo2  1  0.0  0.0  0.6  1.0\n  Cl  Cl3  …",
+   "atom_sequences_plusplus": "Tc Tc Mo Cl 2.93 4.08 5.2 90 90 90",
+   "atom_sequences": "Tc Tc Mo Cl",
+   "crystal_text_llm": "2.9 4.1 5.2\n90 90 90\nTc\n0.46 0.04 0.80\nTc\n0.46 0.04 0.39\nMo\n0.00 0.00 0.60\nCl\n0.00 0.00 0.00",
+   "crystal_system": "orthorhombic",
+   "slices": "Tc Tc Mo Cl 0 2 o o o 0 2 + o o 0 3 o o + 0 3 + o + 0 1 o o o 1 2 o o o 1 2 + o o 2 3 o o + ",
+   "zmatrix": "Tc\nTc 1 2.1\nMo 1 1.7 2 53\nCl 2 2.4 3 95 1 180",
+   "robocrys_rep": null,
+   "material_id": "JvWD1R29Dx9Gljwh1dEVX79DkC6k"
+  },
+  {
+   "local_env": "R3m\nCd (1a) [Mo]1[Sc]2[Hf]3[Cd]4561[Hf]2[Sc]([Mo]4)[Hf]6[Sc]3[Mo]5.[Mo].[Hf]\nSc (1a) [Sc]#[Mo]\nMo (1a) [Sc]#[Mo]\nHf (1a) [Sc]1[Mo]2[Cd]3[Hf]4561[Cd]2[Mo]([Sc]4)[Cd]6[Mo]3[Sc]5.[Sc].[Cd]",
+   "composition": "CdHfMoSc",
+   "cif_p1": "data_HfScCdMo\n_symmetry_space_group_name_H-M   'P 1'\n_cell_length_a   4.81\n_cell_length_b   4.81\n_cell_length_c   4.81\n_cell_angle_alpha   60.0\n_cell_angle_beta   60.0\n_cell_angle_gamma   60.0\n_symmetry_Int_Tables_number   1\n_chemical_formula_structural   HfScCdMo\n_chemical_formula_sum   'Hf1 Sc1 Cd1 Mo1'\n_cell_volume   78.77\n_cell_formula_units_Z   1\nloop_\n _symmetry_equiv_pos_site_id\n _symmetry_equiv_pos_as_xyz\n  1  'x, y, z'\nloop_\n _atom_site_type_symbol\n _atom_site_label\n _atom_site_symmetry_multiplicity\n _atom_site_fract_x\n _atom_site_fract_y\n _atom_site_fract_z\n _atom_site_occupancy\n  Hf  Hf1  1  0.7  0.7  0.7  1.0\n  Sc  Sc3  1  0.0  0.0  0.0  1.0\n  Cd  Cd0  1  0.4  0.4  0.4  1.0\n  Mo  …",
+   "cif_symmetrized": "data_HfScCdMo\n_symmetry_space_group_name_H-M   R3m\n_cell_length_a   4.81\n_cell_length_b   4.81\n_cell_length_c   11.79\n_cell_angle_alpha   90.0\n_cell_angle_beta   90.0\n_cell_angle_gamma   120.0\n_symmetry_Int_Tables_number   160\n_chemical_formula_structural   HfScCdMo\n_chemical_formula_sum   'Hf3 Sc3 Cd3 Mo3'\n_cell_volume   236.32\n_cell_formula_units_Z   3\nloop_\n _symmetry_equiv_pos_site_id\n _symmetry_equiv_pos_as_xyz\n  1  'x, y, z'\n  2  '-y, x-y, z'\n  3  '-x+y, -x, z'\n  4  '-y, -x, z'\n  5  '-x+y, y, z'\n  6  'x, x-y, z'\n  7  'x+1/3, y+2/3, z+2/3'\n  8  '-y+1/3, x-y+2/3, z+2/3'\n  9  '-x+y+1/3, -x+2/3, z+2/3'\n  10  '-y+1/3, -x+2/3, z+2/3'\n  11  '-x+y+1/3, y+2/3, z+2/3'\n  12  'x+1/3, x-y+2/3, z+2/ …",
+   "atom_sequences_plusplus": "Hf Sc Cd Mo 4.81 4.81 4.81 60 60 60",
+   "atom_sequences": "Hf Sc Cd Mo",
+   "crystal_text_llm": "4.8 4.8 4.8\n59 59 59\nHf\n0.70 0.70 0.70\nSc\n0.00 0.00 0.00\nCd\n0.40 0.40 0.40\nMo\n0.10 0.10 0.10",
+   "crystal_system": "cubic",
+   "slices": "Hf Sc Cd Mo 0 2 o o + 0 2 o + o 0 2 + o o 0 3 o + + 0 3 + o + 0 3 + + o 0 1 o + + 0 1 + o + 0 1 + + o 1 3 o o o 1 2 o o - 1 2 o - o 1 2 - o o 2 3 o o + 2 3 o + o 2 3 + o o ",
+   "zmatrix": "Hf\nSc 1 8.2\nCd 1 3.5 2 0\nMo 2 1.2 3 0 1 0",
+   "robocrys_rep": "ScHfMoCd crystallizes in the trigonal R3m space group. Sc(1) is bonded in a single-bond geometry to four equivalent Hf(1), one Mo(1), and three equivalent Cd(1) atoms. There are three shorter (2.81 Å) and one longer (3.52 Å) Sc(1)-Hf(1) bond length. The Sc(1)-Mo(1) bond length is 1.22 Å. All Sc(1)-Cd(1) bond lengths are 2.89 Å. Hf(1) is bonded in a 11-coordinate geometry to four equivalent Sc(1), three equivalent Mo(1), and four equivalent Cd(1) atoms. All Hf(1)-Mo(1) bond lengths are 2.89 Å. There are three shorter (2.81 Å) and one longer (3.52 Å) Hf(1)-Cd(1) bond length. Mo(1) is bonded in a single-bond geometry to one Sc(1), three equivalent Hf(1), and four equivalent Cd(1) atoms. There a …",
+   "material_id": "ejHjb6mJRguNkfHm8vE5Oe4a5ooX"
+  }
  ]
 }
