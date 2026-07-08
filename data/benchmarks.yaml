@@ -102,6 +102,24 @@
   modality: "multimodal"
   leaderboard_url: "https://emma-benchmark.github.io/#leaderboard"
   homepage_url: "https://emma-benchmark.github.io/"
+- name: "FrontierScience"
+  domain: "General"
+  subdomain: "expert-level-science"
+  paper_title: "FrontierScience: Evaluating AI's Ability to Perform Expert-Level Scientific Tasks"
+  arxiv_id: "2601.21165"
+  paper_url: "https://arxiv.org/abs/2601.21165"
+  github: null
+  org: "OpenAI"
+  major_lab: true
+  year: 2026
+  description: "Expert-level science benchmark with an olympiad track (IPhO/IChO/IBO-level) and a rubric-graded PhD-level research track across physics, chemistry, and biology."
+  hf_dataset: "openai/frontierscience"
+  license: "Apache-2.0"
+  size: 160
+  access: "open"
+  task_type: "open-ended"
+  metrics: ["accuracy", "rubric score"]
+  modality: "text"
 - name: "GAOKAO-Bench"
   domain: "General"
   subdomain: "exam"
@@ -272,6 +290,21 @@
   modality: "text"
   leaderboard_url: "https://leaderboard.allenai.org/open_book_qa"
   homepage_url: "https://allenai.org/data/open-book-qa"
+- name: "PaperMind"
+  domain: "General"
+  subdomain: "scientific-paper-reasoning"
+  paper_title: "PaperMind: Benchmarking Agentic Reasoning and Critique over Scientific Papers in Multimodal LLMs"
+  arxiv_id: "2604.21304"
+  paper_url: "https://arxiv.org/abs/2604.21304"
+  github: "Yanjun-Zhao/PaperMind"
+  org: "University of Illinois Urbana-Champaign"
+  major_lab: false
+  year: 2026
+  description: "Multimodal benchmark evaluating agent-oriented reasoning and critique over real research papers across seven domains via grounding, experimental interpretation, cross-source evidence, and critical-assessment tasks."
+  access: "open"
+  task_type: "QA"
+  metrics: ["accuracy"]
+  modality: "multimodal"
 - name: "QASC"
   domain: "General"
   subdomain: "science-QA"
@@ -420,6 +453,22 @@
   size: 1000
   access: "open"
   task_type: "MCQ"
+  metrics: ["accuracy"]
+  modality: "text"
+- name: "SDE"
+  domain: "General"
+  subdomain: "scientific-discovery"
+  paper_title: "Evaluating Large Language Models in Scientific Discovery"
+  arxiv_id: "2512.15567"
+  paper_url: "https://arxiv.org/abs/2512.15567"
+  github: "deepprinciple/lm-evaluation-harness"
+  org: "Cornell / Princeton / Stanford / MIT / Toronto"
+  major_lab: false
+  year: 2025
+  description: "Scenario-grounded scientific-discovery benchmark of 43 scenarios and 1,125 questions across biology, chemistry, materials, and physics, plus 8 project-level hypothesis, experiment-design, and interpretation tasks."
+  size: 1125
+  access: "open"
+  task_type: "open-ended"
   metrics: ["accuracy"]
   modality: "text"
 - name: "SuperGPQA"
@@ -1053,6 +1102,41 @@
   task_type: "open-ended"
   metrics: ["SEED", "accuracy"]
   modality: "text"
+- name: "CritPt"
+  domain: "Physics"
+  subdomain: "research-level-physics"
+  paper_title: "Probing the Critical Point (CritPt) of AI Reasoning: a Frontier Physics Research Benchmark"
+  arxiv_id: "2509.26574"
+  paper_url: "https://arxiv.org/abs/2509.26574"
+  github: "CritPt-Benchmark/CritPt"
+  org: "Argonne National Laboratory / UIUC (50+ physicists, 30+ institutions)"
+  major_lab: false
+  year: 2025
+  description: "71 composite research-project challenges and 190 modular checkpoints authored by 50+ active physicists, auto-graded via numerical, symbolic, and code evaluations."
+  hf_dataset: "CritPt-Benchmark/CritPt"
+  size: 71
+  access: "open"
+  task_type: "open-ended"
+  metrics: ["accuracy"]
+  modality: "text"
+- name: "DiscoverPhysics"
+  domain: "Physics"
+  subdomain: "physics-discovery"
+  paper_title: "DiscoverPhysics: Benchmarking LLMs for Out-of-the-Box Scientific Thinking"
+  arxiv_id: "2605.26087"
+  paper_url: "https://arxiv.org/abs/2605.26087"
+  github: "SampsonML/DiscoverPhysics"
+  org: "Princeton / NYU / Flatiron Institute / Polymathic AI"
+  major_lab: false
+  year: 2026
+  description: "22 simulated worlds with non-standard physics where an agent proposes initial conditions, observes noisy N-body trajectories, and submits a natural-language law plus a Python implementation."
+  hf_dataset: "mattWiemann/DiscoverPhysics"
+  license: "MIT"
+  size: 22
+  access: "open"
+  task_type: "agentic"
+  metrics: ["LLM-judge score", "trajectory match"]
+  modality: "text"
 - name: "Gravity-Bench-v1"
   domain: "Physics"
   subdomain: "physics-discovery"
@@ -1200,6 +1284,23 @@
   metrics: ["answer accuracy (PSAS-A)", "step accuracy (PSAS-S)"]
   modality: "multimodal"
   homepage_url: "https://dxzxy12138.github.io/PhysReason/"
+- name: "PRL-Bench"
+  domain: "Physics"
+  subdomain: "frontier-physics-research"
+  paper_title: "PRL-Bench: A Comprehensive Benchmark Evaluating LLMs' Capabilities in Frontier Physics Research"
+  arxiv_id: "2604.15411"
+  paper_url: "https://arxiv.org/abs/2604.15411"
+  github: null
+  org: "Shanghai Jiao Tong University"
+  major_lab: false
+  year: 2026
+  description: "End-to-end physics research benchmark built from ~100 recent Physical Review Letters papers across five subfields, each turned into a long-horizon task scored by an LLM-as-judge."
+  hf_dataset: "AdrianMiao/PRL_Bench"
+  size: 100
+  access: "open"
+  task_type: "agentic"
+  metrics: ["LLM-as-judge score"]
+  modality: "text"
 - name: "TPBench"
   domain: "Physics"
   subdomain: "theoretical"
@@ -1487,6 +1588,22 @@
   access: "open"
   task_type: "open-ended"
   metrics: ["overall-quality", "specificity", "relevance", "accuracy"]
+  modality: "text"
+- name: "AtomWorld"
+  domain: "Materials"
+  subdomain: "crystalline-spatial-reasoning"
+  paper_title: "AtomWorld: A Benchmark for Evaluating Spatial Reasoning in Large Language Models on Crystalline Materials"
+  arxiv_id: "2510.04704"
+  paper_url: "https://arxiv.org/abs/2510.04704"
+  github: "theAfish/AtomWorldBench"
+  org: "USTC / Shanghai AI Laboratory / UNSW"
+  major_lab: false
+  year: 2025
+  description: "Evaluates LLM spatial reasoning on crystalline materials via ten atomic-structure editing actions across four modeling categories over CIF files with verifiable metrics."
+  license: "MIT"
+  access: "open"
+  task_type: "open-ended"
+  metrics: ["success rate"]
   modality: "text"
 - name: "LLM4Mat-Bench"
   domain: "Materials"
@@ -1928,6 +2045,24 @@
   metrics: ["accuracy", "precision", "coverage"]
   modality: "multimodal"
   homepage_url: "https://www.futurehouse.org/research-announcements/lab-bench-measuring-capabilities-of-language-models-for-biology-research"
+- name: "LABBench2"
+  domain: "Biology"
+  subdomain: "biology-research"
+  paper_title: "LABBench2: An Improved Benchmark for AI Systems Performing Biology Research"
+  arxiv_id: "2604.09554"
+  paper_url: "https://arxiv.org/abs/2604.09554"
+  github: "EdisonScientific/labbench2"
+  org: "FutureHouse (Edison Scientific)"
+  major_lab: false
+  year: 2026
+  description: "Successor to LAB-Bench with ~1,900 biology-research tasks in realistic contexts (literature, figures, protocols, databases), giving a sharp difficulty jump over LAB-Bench."
+  hf_dataset: "futurehouse/labbench2"
+  license: "CC-BY-SA-4.0"
+  size: 1900
+  access: "gated"
+  task_type: "MCQ"
+  metrics: ["accuracy"]
+  modality: "multimodal"
 - name: "LifeSciBench"
   domain: "Biology"
   subdomain: "life-science-research"
@@ -1961,6 +2096,23 @@
   access: "open"
   task_type: "MCQ"
   metrics: ["accuracy"]
+  modality: "text"
+- name: "VirBench"
+  domain: "Biology"
+  subdomain: "agentic-genomics-retrieval"
+  paper_title: "Deterministic access to global viral sequence data enables robust agentic scientific discovery"
+  arxiv_id: "2606.06749"
+  paper_url: "https://arxiv.org/abs/2606.06749"
+  github: null
+  org: "Anthropic (with NCBI, Broad Institute, Pachter Lab)"
+  major_lab: true
+  year: 2026
+  description: "120 curated viral-sequence retrieval queries across ~40 pathogens testing whether LLM agents pull correct ground-truth sequence data from NCBI Virus."
+  license: "CC-BY-4.0"
+  size: 120
+  access: "request"
+  task_type: "agentic"
+  metrics: ["retrieval accuracy"]
   modality: "text"
 
 # ---------- Agentic ---------------------------
@@ -2127,6 +2279,21 @@
   access: "open"
   task_type: "agentic"
   metrics: ["success rate"]
+  modality: "code"
+- name: "HeurekaBench"
+  domain: "Agentic"
+  subdomain: "ai-co-scientist"
+  paper_title: "HeurekaBench: A Benchmarking Framework for AI Co-scientist"
+  arxiv_id: "2601.01678"
+  paper_url: "https://arxiv.org/abs/2601.01678"
+  github: "mlbio-epfl/HeurekaBench"
+  org: "EPFL (MLBio Lab)"
+  major_lab: false
+  year: 2026
+  description: "Builds benchmarks of open-ended research questions grounded in real studies and their code to evaluate end-to-end AI co-scientist agents (instantiated as sc-HeurekaBench in single-cell biology)."
+  access: "open"
+  task_type: "agentic"
+  metrics: ["workflow correctness"]
   modality: "code"
 - name: "InnovatorBench"
   domain: "Agentic"
@@ -2378,6 +2545,21 @@
   modality: "code"
   leaderboard_url: "https://rexbench.com/"
   homepage_url: "https://rexbench.com/"
+- name: "SciAgentGym"
+  domain: "Agentic"
+  subdomain: "scientific-tool-use"
+  paper_title: "SciAgentGym: Benchmarking Multi-Step Scientific Tool-use in LLM Agents"
+  arxiv_id: "2602.12984"
+  paper_url: "https://arxiv.org/abs/2602.12984"
+  github: "CMarsRover/SciAgentGYM"
+  org: "Fudan NLP Group"
+  major_lab: false
+  year: 2026
+  description: "Agentic science benchmark pairing an environment of 1,780 domain-specific tools across natural-science disciplines with a tiered suite from elementary tool actions to long-horizon workflows."
+  access: "open"
+  task_type: "agentic"
+  metrics: ["success rate"]
+  modality: "code"
 - name: "SciCode"
   domain: "Agentic"
   subdomain: "scientific-coding"
