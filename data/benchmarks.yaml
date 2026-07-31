@@ -83,6 +83,23 @@
   modality: "text"
   leaderboard_url: "https://cevalbenchmark.com/static/leaderboard.html"
   homepage_url: "https://cevalbenchmark.com/"
+- name: "CURIE"
+  domain: "General"
+  subdomain: "long-context-science"
+  paper_title: "CURIE: Evaluating LLMs On Multitask Scientific Long Context Understanding and Reasoning"
+  arxiv_id: "2503.13517"
+  paper_url: "https://arxiv.org/abs/2503.13517"
+  github: "google/curie"
+  org: "Google"
+  major_lab: true
+  year: 2025
+  description: "580 expert-curated problems drawn from 429 research documents across ten long-context tasks in materials science, condensed matter physics, quantum computing, geospatial analysis, biodiversity, and proteins."
+  license: "Apache-2.0"
+  size: 580
+  access: "open"
+  task_type: "open-ended"
+  metrics: ["LMScore", "LLMSim", "ROUGE-L"]
+  modality: "text"
 - name: "EMMA"
   domain: "General"
   subdomain: "multimodal-STEM"
@@ -232,6 +249,22 @@
   modality: "multimodal"
   leaderboard_url: "https://mmmu-benchmark.github.io/#leaderboard"
   homepage_url: "https://mmmu-benchmark.github.io/"
+- name: "MMSci"
+  domain: "General"
+  subdomain: "multimodal"
+  paper_title: "MMSci: A Dataset for Graduate-Level Multi-Discipline Multimodal Scientific Understanding"
+  arxiv_id: "2407.04903"
+  paper_url: "https://arxiv.org/abs/2407.04903"
+  github: "Leezekun/MMSci"
+  org: "UC Santa Barbara et al."
+  major_lab: false
+  year: 2024
+  description: "Figure-captioning and multiple-choice tasks built from open-access Nature Communications articles spanning 72 scientific disciplines."
+  license: "CC-BY-4.0"
+  access: "open"
+  task_type: "VQA"
+  metrics: ["accuracy"]
+  modality: "multimodal"
 - name: "OlympiadBench"
   domain: "General"
   subdomain: "olympiad"
@@ -325,6 +358,41 @@
   modality: "text"
   leaderboard_url: "https://leaderboard.allenai.org/qasc"
   homepage_url: "https://allenai.org/data/qasc"
+- name: "ScholarQABench"
+  domain: "General"
+  subdomain: "literature-search"
+  paper_title: "OpenScholar: Synthesizing Scientific Literature with Retrieval-augmented LMs"
+  arxiv_id: "2411.14199"
+  paper_url: "https://arxiv.org/abs/2411.14199"
+  github: "AkariAsai/OpenScholar"
+  org: "University of Washington / Allen AI (AI2)"
+  major_lab: false
+  year: 2024
+  description: "2,967 expert-written literature-search queries with 208 long-form expert answers across computer science, physics, neuroscience, and biomedicine, scored on citation-supported synthesis."
+  license: "Apache-2.0"
+  size: 2967
+  access: "open"
+  task_type: "open-ended"
+  metrics: ["correctness", "citation F1"]
+  modality: "text"
+- name: "SciArena"
+  domain: "General"
+  subdomain: "literature-grounded-arena"
+  paper_title: "SciArena: An Open Evaluation Platform for Non-Verifiable Scientific Literature-Grounded Tasks"
+  arxiv_id: "2507.01001"
+  paper_url: "https://arxiv.org/abs/2507.01001"
+  github: "yale-nlp/SciArena"
+  org: "Yale NLP / Allen AI (AI2)"
+  major_lab: false
+  year: 2025
+  description: "Open platform where researchers vote head-to-head on model answers to literature-grounded science questions, paired with SciArena-Eval for meta-evaluating automated judges."
+  hf_dataset: "yale-nlp/SciArena"
+  license: "MIT"
+  access: "open"
+  task_type: "open-ended"
+  metrics: ["Elo"]
+  modality: "text"
+  leaderboard_url: "https://sciarena.allen.ai/"
 - name: "SciAssess"
   domain: "General"
   subdomain: "literature"
@@ -621,6 +689,24 @@
   modality: "text"
   leaderboard_url: "https://epoch.ai/benchmarks"
   homepage_url: "https://epoch.ai/frontiermath"
+- name: "GSM-Symbolic"
+  domain: "Math"
+  subdomain: "reasoning-robustness"
+  paper_title: "GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models"
+  arxiv_id: "2410.05229"
+  paper_url: "https://arxiv.org/abs/2410.05229"
+  github: "apple/ml-gsm-symbolic"
+  org: "Apple"
+  major_lab: true
+  year: 2024
+  description: "Symbolic templates over GSM8K that regenerate each problem with new names, values, and extra clauses to test whether grade-school math accuracy survives superficial perturbation."
+  hf_dataset: "apple/GSM-Symbolic"
+  license: "CC-BY-NC-ND-4.0"
+  size: 5000
+  access: "open"
+  task_type: "open-ended"
+  metrics: ["accuracy"]
+  modality: "text"
 - name: "GSM8K"
   domain: "Math"
   subdomain: "grade-school"
@@ -763,6 +849,44 @@
   task_type: "open-ended"
   metrics: ["accuracy"]
   modality: "text"
+- name: "MATH-Vision (MATH-V)"
+  domain: "Math"
+  subdomain: "multimodal-competition-math"
+  paper_title: "Measuring Multimodal Mathematical Reasoning with MATH-Vision Dataset"
+  arxiv_id: "2402.14804"
+  paper_url: "https://arxiv.org/abs/2402.14804"
+  github: "mathllm/MATH-V"
+  org: "CUHK MMLab / Shanghai AI Lab"
+  major_lab: false
+  year: 2024
+  description: "3,040 real competition problems with visual context, spanning 16 mathematical disciplines and five difficulty levels."
+  hf_dataset: "MathLLMs/MathVision"
+  license: "MIT"
+  size: 3040
+  access: "open"
+  task_type: "VQA"
+  metrics: ["accuracy"]
+  modality: "multimodal"
+  leaderboard_url: "https://mathllm.github.io/mathvision/#leaderboard"
+  homepage_url: "https://mathllm.github.io/mathvision/"
+- name: "MathArena"
+  domain: "Math"
+  subdomain: "uncontaminated-competition"
+  paper_title: "MathArena: Evaluating LLMs on Uncontaminated Math Competitions"
+  arxiv_id: "2505.23281"
+  paper_url: "https://arxiv.org/abs/2505.23281"
+  github: "eth-sri/matharena"
+  org: "ETH Zurich / INSAIT"
+  major_lab: false
+  year: 2025
+  description: "Evaluates models only on competitions held after their release date to rule out contamination, covering 162 problems from seven competitions plus human-graded IMO proof writing."
+  license: "MIT"
+  size: 162
+  access: "open"
+  task_type: "open-ended"
+  metrics: ["accuracy"]
+  modality: "text"
+  leaderboard_url: "https://matharena.ai/"
 - name: "MathBench"
   domain: "Math"
   subdomain: "multi-level"
@@ -1084,6 +1208,24 @@
   task_type: "MCQ"
   metrics: ["accuracy", "SymStd"]
   modality: "text"
+- name: "ClimaQA"
+  domain: "Physics"
+  subdomain: "climate-science"
+  paper_title: "ClimaQA: An Automated Evaluation Framework for Climate Question Answering Models"
+  arxiv_id: "2410.16701"
+  paper_url: "https://arxiv.org/abs/2410.16701"
+  github: "Rose-STL-Lab/genie-climaqa"
+  org: "UC San Diego"
+  major_lab: false
+  year: 2024
+  description: "Graduate-level climate science QA generated from textbooks with climate scientists in the loop: 566 expert-validated Gold questions plus 3,000 synthetic Silver questions in MCQ, freeform, and cloze form."
+  hf_dataset: "Rose-STL-Lab/ClimaQA"
+  license: "Apache-2.0"
+  size: 566
+  access: "open"
+  task_type: "QA"
+  metrics: ["accuracy"]
+  modality: "text"
 - name: "CMPhysBench"
   domain: "Physics"
   subdomain: "condensed-matter"
@@ -1137,6 +1279,22 @@
   task_type: "agentic"
   metrics: ["LLM-judge score", "trajectory match"]
   modality: "text"
+- name: "FEABench"
+  domain: "Physics"
+  subdomain: "simulation-engineering"
+  paper_title: "FEABench: Evaluating Language Models on Multiphysics Reasoning Ability"
+  arxiv_id: "2504.06260"
+  paper_url: "https://arxiv.org/abs/2504.06260"
+  github: "google/feabench"
+  org: "Google Research / Harvard"
+  major_lab: true
+  year: 2025
+  description: "Finite-element analysis problems solved end-to-end by driving the COMSOL Multiphysics API: 15 manually verified problems (Gold) plus 200 algorithmically parsed tasks (Large)."
+  license: "Apache-2.0"
+  access: "open"
+  task_type: "agentic"
+  metrics: ["executability", "relative error"]
+  modality: "code"
 - name: "Gravity-Bench-v1"
   domain: "Physics"
   subdomain: "physics-discovery"
@@ -2599,6 +2757,23 @@
   metrics: ["success-rate"]
   modality: "code"
   homepage_url: "https://osu-nlp-group.github.io/ScienceAgentBench/"
+- name: "ScienceWorld"
+  domain: "Agentic"
+  subdomain: "interactive-science-env"
+  paper_title: "ScienceWorld: Is your Agent Smarter than a 5th Grader?"
+  arxiv_id: "2203.07540"
+  paper_url: "https://arxiv.org/abs/2203.07540"
+  github: "allenai/ScienceWorld"
+  org: "University of Arizona / Microsoft Research / Allen AI (AI2)"
+  major_lab: true
+  year: 2022
+  description: "Interactive text environment with 30 elementary-science tasks where agents must run the experiment — melt a substance, test conductivity, breed a plant — instead of reciting the answer."
+  license: "Apache-2.0"
+  size: 30
+  access: "open"
+  task_type: "agentic"
+  metrics: ["task score"]
+  modality: "text"
 - name: "Scientist-Bench"
   domain: "Agentic"
   subdomain: "autonomous-research"
