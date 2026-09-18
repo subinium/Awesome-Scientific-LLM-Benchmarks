@@ -83,6 +83,26 @@
   modality: "text"
   leaderboard_url: "https://cevalbenchmark.com/static/leaderboard.html"
   homepage_url: "https://cevalbenchmark.com/"
+- name: "CharXiv"
+  domain: "General"
+  subdomain: "scientific-chart-reasoning"
+  paper_title: "CharXiv: Charting Gaps in Realistic Chart Understanding in Multimodal LLMs"
+  arxiv_id: "2406.18521"
+  paper_url: "https://arxiv.org/abs/2406.18521"
+  github: "princeton-nlp/CharXiv"
+  org: "Princeton University / University of Wisconsin-Madison / HKU"
+  major_lab: false
+  year: 2024
+  description: "2,323 expert-curated charts from scientific papers with descriptive and reasoning questions for realistic multimodal chart understanding."
+  hf_dataset: "princeton-nlp/CharXiv"
+  license: "CC-BY-SA-4.0"
+  size: 2323
+  access: "open"
+  task_type: "VQA"
+  metrics: ["accuracy"]
+  modality: "multimodal"
+  leaderboard_url: "https://charxiv.github.io/#leaderboard"
+  homepage_url: "https://charxiv.github.io/"
 - name: "CURIE"
   domain: "General"
   subdomain: "long-context-science"
@@ -164,7 +184,7 @@
   org: "NYU / Anthropic / Cohere"
   major_lab: true
   year: 2023
-  description: "448 expert-written graduate-level biology, physics, and chemistry Google-proof multiple-choice questions."
+  description: "448 expert-written graduate-level biology, physics, and chemistry questions, including the 198-item GPQA Diamond subset used in frontier-model evaluations."
   hf_dataset: "Idavidrein/gpqa"
   license: "CC-BY-4.0"
   size: 448
@@ -243,6 +263,26 @@
   hf_dataset: "MMMU/MMMU"
   license: "Apache-2.0"
   size: 11550
+  access: "open"
+  task_type: "VQA"
+  metrics: ["accuracy"]
+  modality: "multimodal"
+  leaderboard_url: "https://mmmu-benchmark.github.io/#leaderboard"
+  homepage_url: "https://mmmu-benchmark.github.io/"
+- name: "MMMU-Pro"
+  domain: "General"
+  subdomain: "robust-multimodal"
+  paper_title: "MMMU-Pro: A More Robust Multi-discipline Multimodal Understanding Benchmark"
+  arxiv_id: "2409.02813"
+  paper_url: "https://arxiv.org/abs/2409.02813"
+  github: null
+  org: "CMU / University of Waterloo / OSU"
+  major_lab: false
+  year: 2024
+  description: "3,460 college-level multimodal questions in standard and vision-only settings, filtered to require visual evidence and expanded to ten answer options."
+  hf_dataset: "MMMU/MMMU_Pro"
+  license: "Apache-2.0"
+  size: 3460
   access: "open"
   task_type: "VQA"
   metrics: ["accuracy"]
@@ -2303,7 +2343,7 @@
   org: "Allen AI (AI2)"
   major_lab: false
   year: 2025
-  description: "2,400+ problems across eleven benchmarks evaluating agents over the full scientific research pipeline."
+  description: "ICLR 2026 oral suite with 2,400+ problems across eleven benchmarks covering literature, coding, data analysis, and end-to-end scientific research."
   hf_dataset: "allenai/asta-bench"
   license: "Apache-2.0"
   size: 2400
@@ -2311,6 +2351,8 @@
   task_type: "agentic"
   metrics: ["accuracy"]
   modality: "multimodal"
+  leaderboard_url: "https://allenai-asta-bench-leaderboard.hf.space"
+  homepage_url: "https://allenai.org/asta/bench"
 - name: "BLADE"
   domain: "Agentic"
   subdomain: "data-analysis"
@@ -2490,6 +2532,25 @@
   modality: "text"
   leaderboard_url: "http://liveideabench.com"
   homepage_url: "http://liveideabench.com"
+- name: "LitQA2"
+  domain: "Agentic"
+  subdomain: "scientific-literature-research"
+  paper_title: "Language agents achieve superhuman synthesis of scientific knowledge"
+  arxiv_id: "2409.13740"
+  paper_url: "https://arxiv.org/abs/2409.13740"
+  github: null
+  org: "FutureHouse"
+  major_lab: false
+  year: 2024
+  description: "248 expert-written multiple-choice questions requiring retrieval of a specific scientific paper and reasoning over its full text, with 199 questions publicly released."
+  hf_dataset: "futurehouse/lab-bench"
+  license: "CC-BY-SA-4.0"
+  size: 248
+  access: "open"
+  task_type: "MCQ"
+  metrics: ["accuracy", "precision"]
+  modality: "text"
+  homepage_url: "https://www.futurehouse.org/news/wikicrow"
 - name: "LMR-Bench"
   domain: "Agentic"
   subdomain: "paper-reproduction"
