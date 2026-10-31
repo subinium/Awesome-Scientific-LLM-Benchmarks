@@ -192,6 +192,26 @@
   task_type: "MCQ"
   metrics: ["accuracy"]
   modality: "text"
+- name: "HLE-Diamond"
+  domain: "General"
+  subdomain: "frontier"
+  paper_title: "Introducing HLE-Diamond"
+  arxiv_id: null
+  paper_url: "https://lastexam.ai/blog/hle-diamond"
+  github: null
+  org: "CAIS / Scale AI"
+  major_lab: false
+  year: 2026
+  description: "Refined 1,000-question subset of Humanity's Last Exam, split evenly between expert knowledge and reasoning across academic subjects including science and mathematics."
+  hf_dataset: "cais/hle-diamond"
+  license: "MIT"
+  size: 1000
+  access: "gated"
+  task_type: "QA"
+  metrics: ["accuracy"]
+  modality: "multimodal"
+  leaderboard_url: "https://lastexam.ai/blog/hle-diamond"
+  homepage_url: "https://lastexam.ai/blog/hle-diamond"
 - name: "Humanity's Last Exam"
   domain: "General"
   subdomain: "frontier"
@@ -729,6 +749,41 @@
   modality: "text"
   leaderboard_url: "https://epoch.ai/benchmarks"
   homepage_url: "https://epoch.ai/frontiermath"
+- name: "FrontierMath Erdős"
+  domain: "Math"
+  subdomain: "open-problem-formal-proof"
+  paper_title: "FrontierMath Erdős"
+  arxiv_id: "2609.25050"
+  paper_url: "https://arxiv.org/abs/2609.25050"
+  github: null
+  org: "Epoch AI / University of Manchester"
+  major_lab: false
+  year: 2026
+  description: "68 Erdős conjectures open as of August 2026, curated for mathematical significance and difficulty, requiring autonomous Lean proofs or disproofs under a fixed budget."
+  size: 68
+  access: "open"
+  task_type: "proof"
+  metrics: ["accuracy"]
+  modality: "code"
+  leaderboard_url: "https://epoch.ai/benchmarks/frontiermath-erdos"
+  homepage_url: "https://epoch.ai/latest/announcing-frontiermath-erdos"
+- name: "FrontierMath: Open Problems"
+  domain: "Math"
+  subdomain: "open-problem-discovery"
+  paper_title: "Introducing FrontierMath: Open Problems"
+  arxiv_id: null
+  paper_url: "https://epochai.substack.com/p/introducing-frontiermath-open-problems"
+  github: null
+  org: "Epoch AI"
+  major_lab: false
+  year: 2026
+  description: "Open research mathematics problems that resisted professional mathematicians, with public problem statements and paid-access programmatic verifiers for proposed solutions."
+  access: "request"
+  task_type: "open-ended"
+  metrics: ["problems solved"]
+  modality: "text"
+  leaderboard_url: "https://epoch.ai/frontiermath/open-problems"
+  homepage_url: "https://epoch.ai/frontiermath/open-problems"
 - name: "GSM-Symbolic"
   domain: "Math"
   subdomain: "reasoning-robustness"
@@ -1080,6 +1135,23 @@
   modality: "text"
   leaderboard_url: "https://omni-math.github.io/"
   homepage_url: "https://omni-math.github.io/"
+- name: "ProofBench"
+  domain: "Math"
+  subdomain: "formal-proof"
+  paper_title: "FormalProofBench: Can Models Write Graduate Level Math Proofs That Are Formally Verified?"
+  arxiv_id: "2603.26996"
+  paper_url: "https://arxiv.org/abs/2603.26996"
+  github: null
+  org: "Vals AI"
+  major_lab: false
+  year: 2026
+  description: "FormalProofBench evaluates advanced undergraduate and graduate mathematics through Lean 4 proof generation, with a 100-problem private test split and iterative tool feedback."
+  size: 100
+  task_type: "proof"
+  metrics: ["accuracy"]
+  modality: "code"
+  leaderboard_url: "https://www.vals.ai/benchmarks/proof_bench"
+  homepage_url: "https://www.vals.ai/benchmarks/proof_bench"
 - name: "ProofNet"
   domain: "Math"
   subdomain: "formal-proof"
@@ -1136,6 +1208,23 @@
   modality: "code"
   leaderboard_url: "https://trishullab.github.io/PutnamBench/leaderboard.html"
   homepage_url: "https://trishullab.github.io/PutnamBench/"
+- name: "Riemann-bench"
+  domain: "Math"
+  subdomain: "research-mathematics"
+  paper_title: "Riemann-Bench: A Benchmark for Moonshot Mathematics"
+  arxiv_id: "2604.06802"
+  paper_url: "https://arxiv.org/abs/2604.06802"
+  github: null
+  org: "Surge AI"
+  major_lab: false
+  year: 2026
+  description: "25 private expert-authored research mathematics problems with independently verified, programmatically checkable answers, evaluated with access to coding tools and search."
+  size: 25
+  task_type: "open-ended"
+  metrics: ["accuracy"]
+  modality: "text"
+  leaderboard_url: "https://surgehq.ai/benchmarks/riemann-bench"
+  homepage_url: "https://surgehq.ai/benchmarks/riemann-bench"
 - name: "We-Math"
   domain: "Math"
   subdomain: "multimodal"
@@ -1940,6 +2029,25 @@
   modality: "multimodal"
 
 # ---------- Biology ---------------------------
+- name: "AssayBench"
+  domain: "Biology"
+  subdomain: "phenotypic-screen-prediction"
+  paper_title: "AssayBench: An Assay-Level Virtual Cell Benchmark for LLMs and Agents"
+  arxiv_id: "2605.10876"
+  paper_url: "https://arxiv.org/abs/2605.10876"
+  github: "Genentech/AssayBench"
+  org: "Genentech"
+  major_lab: false
+  year: 2026
+  description: "Evaluates frontier LLMs and agents on gene-hit ranking for 1,920 public CRISPR screens across five phenotype classes, scored with chance-adjusted nDCG."
+  hf_dataset: "Genentech/assaybench"
+  license: "MIT"
+  size: 1920
+  access: "open"
+  task_type: "generation"
+  metrics: ["adjusted nDCG@100"]
+  modality: "text"
+  homepage_url: "https://genentech.github.io/AssayBench/"
 - name: "BioCoder"
   domain: "Biology"
   subdomain: "code-generation"
@@ -2333,6 +2441,25 @@
   metrics: ["F1", "ROUGE-L", "BERTScore"]
   modality: "multimodal"
   homepage_url: "https://renzelou.github.io/AAAR-1.0/"
+- name: "AIRS-Bench"
+  domain: "Agentic"
+  subdomain: "ml-research"
+  paper_title: "AIRS-Bench: a Suite of Tasks for Frontier AI Research Science Agents"
+  arxiv_id: "2602.06855"
+  paper_url: "https://arxiv.org/abs/2602.06855"
+  github: "facebookresearch/airs-bench"
+  org: "Meta FAIR"
+  major_lab: true
+  year: 2026
+  description: "20 paper-derived tasks across language modeling, mathematics, bioinformatics, and time series testing research agents on idea generation, experimentation, analysis, and iterative refinement."
+  hf_dataset: "facebook/airs-bench"
+  license: "CC-BY-NC-4.0"
+  size: 20
+  access: "open"
+  task_type: "agentic"
+  metrics: ["normalized score"]
+  modality: "code"
+  homepage_url: "https://github.com/facebookresearch/airs-bench"
 - name: "AstaBench"
   domain: "Agentic"
   subdomain: "research-agent-suite"
@@ -2889,3 +3016,22 @@
   metrics: ["success rate"]
   modality: "code"
   leaderboard_url: "https://huggingface.co/spaces/allenai/super_leaderboard"
+- name: "Terminal-Bench-Science"
+  domain: "Agentic"
+  subdomain: "scientific-research-workflows"
+  paper_title: "Terminal-Bench-Science: Evaluating AI agents on research workflows across scientific domains"
+  arxiv_id: null
+  paper_url: "https://www.terminal-bench-science.ai/"
+  github: "harbor-framework/terminal-bench-science"
+  org: "Stanford University / Laude Institute / Terminal-Bench-Science Team"
+  major_lab: false
+  year: 2026
+  description: "70 expert-authored research workflows in v0.1.0 across life, physical, earth, mathematical, and engineering sciences, executed in terminal environments and graded by verifier tests."
+  license: "Apache-2.0"
+  size: 70
+  access: "open"
+  task_type: "agentic"
+  metrics: ["pass@1"]
+  modality: "code"
+  leaderboard_url: "https://www.terminal-bench-science.ai/"
+  homepage_url: "https://www.terminal-bench-science.ai/"
