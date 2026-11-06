@@ -2980,6 +2980,25 @@
   modality: "code"
   leaderboard_url: "https://autoresearcher.github.io/leaderboard"
   homepage_url: "https://autoresearcher.github.io/"
+- name: "SciPIvot"
+  domain: "Agentic"
+  subdomain: "research-judgment"
+  paper_title: "SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents"
+  arxiv_id: "2610.21082"
+  paper_url: "https://arxiv.org/abs/2610.21082"
+  github: "AutoResearch-Factory/SciPIvot"
+  org: "University of Maryland"
+  major_lab: false
+  year: 2026
+  description: "248 research-judgment cases from 26 agent-run projects in six scientific fields, where a model picks between the original LLM plan and a senior researcher's correction."
+  hf_dataset: "sun1245/SciPIvot"
+  license: "CC-BY-4.0"
+  size: 248
+  access: "gated"
+  task_type: "MCQ"
+  metrics: ["accuracy"]
+  modality: "text"
+  homepage_url: "https://autoresearch-factory.github.io/SciPIvot/"
 - name: "SciReplicate-Bench"
   domain: "Agentic"
   subdomain: "paper-reproduction"
