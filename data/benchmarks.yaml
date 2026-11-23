@@ -2441,6 +2441,25 @@
   metrics: ["F1", "ROUGE-L", "BERTScore"]
   modality: "multimodal"
   homepage_url: "https://renzelou.github.io/AAAR-1.0/"
+- name: "Accelerate Bench"
+  domain: "Agentic"
+  subdomain: "scientific computing"
+  paper_title: "Accelerate Bench: Evaluating Agents for Application-Level Program Optimization"
+  arxiv_id: "2611.20882"
+  paper_url: "https://arxiv.org/abs/2611.20882"
+  github: "AdAstraAbyssoque/accelerate-bench"
+  org: "Tencent Hy Team / The Hong Kong University of Science and Technology / The Hong Kong University of Science and Technology (Guangzhou) / Tsinghua University / Peking University"
+  major_lab: false
+  year: 2026
+  description: "Accelerate Bench is a long-horizon coding agent benchmark in which agents have up to eight hours to make a scientific computing application faster while keeping its outputs correct."
+  hf_dataset: "AdAstraAbyssoque/accelerate-bench"
+  size: 32
+  access: "gated"
+  task_type: "agentic"
+  metrics: ["Score@1"]
+  modality: "code"
+  leaderboard_url: "https://acceleratebench.com/"
+  homepage_url: "https://acceleratebench.com/"
 - name: "AIRS-Bench"
   domain: "Agentic"
   subdomain: "ml-research"
