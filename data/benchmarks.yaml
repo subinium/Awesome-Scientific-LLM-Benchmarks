@@ -2403,6 +2403,26 @@
   task_type: "MCQ"
   metrics: ["accuracy"]
   modality: "text"
+- name: "PubMedQA"
+  domain: "Biology"
+  subdomain: "biomedical-research-QA"
+  paper_title: "PubMedQA: A Dataset for Biomedical Research Question Answering"
+  arxiv_id: "1909.06146"
+  paper_url: "https://arxiv.org/abs/1909.06146"
+  github: "pubmedqa/pubmedqa"
+  org: "University of Pittsburgh / CMU / Google"
+  major_lab: false
+  year: 2019
+  description: "1,000 expert-labeled yes/no/maybe research questions answered from PubMed abstracts with the conclusion removed, scored on a 500-question test set."
+  hf_dataset: "qiaojin/PubMedQA"
+  license: "MIT"
+  size: 500
+  access: "open"
+  task_type: "QA"
+  metrics: ["accuracy", "macro-F1"]
+  modality: "text"
+  leaderboard_url: "https://pubmedqa.github.io"
+  homepage_url: "https://pubmedqa.github.io"
 - name: "VirBench"
   domain: "Biology"
   subdomain: "agentic-genomics-retrieval"
